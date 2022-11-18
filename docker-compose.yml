@@ -1,0 +1,57 @@
+version: "3.8"
+
+services:
+  loyiha:
+    build: .
+    volumes:
+      - .:/django
+    ports:
+      - 7000:8000
+    
+    image: loyiha:app
+    container_name: loyiha_ishi
+    command: python manage.py runserver 0.0.0.0:8000
+    depends_on:
+      - db
+  db:
+    image: postgres
+    volumes:
+      - .:/var/lib/psql/data
+    environment:
+      POSTGRES_DB: "takk"
+      POSTGRES_USER: "takk"
+      POSTGRES_PASSWORD: "takk"
+    container_name: pgsql
+
+  rabbit:
+    image: rabbitmq:3-management-alpine
+    container_name: 'rabbitmq'
+    ports:
+        - 5672:5672
+        - 15672:15672
+    volumes:
+        - ~/.docker-conf/rabbitmq/data/:/var/lib/rabbitmq/
+        - ~/.docker-conf/rabbitmq/log/:/var/log/rabbitmq
+  celery:
+    container_name: celery
+    build: .
+    command: celery -A conf worker -l info
+    restart: always
+
+    depends_on:
+      - loyiha
+      - rabbit
+
+  celery-beat:
+    container_name: celerybeat
+    build: .
+    command: celery -A conf beat -l info
+    restart: always
+
+    depends_on:
+      - loyiha
+      - rabbit
+
+networks:
+  rabbitmq_go_net:
+    driver: bridge

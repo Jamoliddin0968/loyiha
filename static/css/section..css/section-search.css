@@ -1,0 +1,126 @@
+.sec-search{
+    max-height: 50px;
+    margin: 20px 0;
+}
+.sec-search .search-box .logo img{
+    width: 160px;
+}
+.sec-search .search-box .search{
+    position: relative;
+    width: 500px;
+    height: 50px;
+    max-height: 50px;
+}
+.sec-search .search-box .search input{
+    width: 100%;
+    height: 100%;
+    outline: none;
+    border: none;
+    background:var(--text-hover);
+    padding: 20px 15px;
+    color: var(--text-color);
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+.sec-search .search-box .search ion-icon{
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    font-size: 25px;
+    color: var(--content-color);
+    cursor: pointer;
+}
+.sec-search .search-box .like-sell div{
+    margin-right: 20px;
+    transition: all .25s ease-in-out;
+    -webkit-transition: all .25s ease-in-out;
+    -moz-transition: all .25s ease-in-out;
+    -ms-transition: all .25s ease-in-out;
+    -o-transition: all .25s ease-in-out;
+    cursor: pointer;
+}
+.sec-search .search-box .like-sell div:hover{
+    transform: translateY(-5px);
+    -webkit-transform: translateY(-5px);
+    -moz-transform: translateY(-5px);
+    -ms-transform: translateY(-5px);
+    -o-transform: translateY(-5px);
+}
+.sec-search .search-box .like-sell div ion-icon{
+    font-size: 25px;
+    font-weight: bold;
+    color: var(--content-color);
+}
+.sec-search .search-box .like-sell div:nth-child(2){
+    margin-right: 0;
+}
+.burger{
+    width: 40px;
+    height: 40px;
+    display: none;
+    padding: 5px;
+}
+.burger span{
+    width: 80%;
+    height: 3px;
+    margin: auto;
+    background:#fff
+}
+@media (max-width: 991px){
+    .sec-search{
+        background:var(--background-color);
+        
+        
+        margin: 0;
+        max-height: max-content;
+    }
+    .sec-search .search-box{
+        max-width: 100%;
+    }
+    .sec-search .search-box .search{
+        width: 100%;
+        max-height: 40px;
+        margin-top: 40px;
+        margin-bottom: 10px;
+}
+    .search .search-box .search input{
+        background: none;
+    }
+    .sec-search .search-box .logo{
+        position: absolute;
+        top: 10px;
+        left: 60px;
+    }
+    .sec-search .search-box .like-sell{
+        position: absolute;
+        top: 10px;
+        right: 20px;
+    }
+    .sec-search .search-box .like-sell div span{
+        display: none;
+    }
+    .burger{
+        position: absolute;
+        top: 5px;
+        left: 15px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    .sec-search .search-box .search input{
+        background: #fff;
+    }
+    body.dark .sec-search .search-box .search input{
+        background: #000;
+        border: 1px solid #fff;
+    }
+}

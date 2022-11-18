@@ -1,0 +1,32 @@
+.icon-filter .filter-box ul a{
+    color: var(--dark-text);
+    text-decoration: none;
+}
+.icon-filter .filter-box ul li{
+    list-style: none;
+}
+.icon-filter .filter-box ul a div{
+    display: grid;
+    place-items: center;
+}
+.icon-filter .filter-box ul a:hover div{
+    background: var(--text-hover);
+}
+@media(max-width: 991px){
+    .icon-filter .filter-box{
+        max-width: 100%;
+    }
+}
+@media(max-width: 768px){
+    .icon-filter{
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+    .icon-filter .filter-box ul a div img{
+        max-width: 30px;
+    }
+    .icon-filter .filter-box ul a div{
+        font-size: 12.6px;
+        text-align: center;
+    }
+}

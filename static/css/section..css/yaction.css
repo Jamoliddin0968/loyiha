@@ -1,0 +1,92 @@
+.yaction .container .yandexProduct .products,
+.menuAyollarkiyimi .menuProduck .ContentPage .products{
+    padding: 10px;
+    cursor: pointer;
+    transition: all .25s ease-in-out;
+    -webkit-transition: all .25s ease-in-out;
+    -moz-transition: all .25s ease-in-out;
+    -ms-transition: all .25s ease-in-out;
+    -o-transition: all .25s ease-in-out;
+}
+.yaction .container .yandexProduct .products:hover,
+.menuAyollarkiyimi .menuProduck .ContentPage .products:hover{
+    transform: translateY(-10px);
+    -webkit-transform: translateY(-10px);
+    -moz-transform: translateY(-10px);
+    -ms-transform: translateY(-10px);
+    -o-transform: translateY(-10px);
+}
+
+.yaction .container .yandexProduct .products img,
+.menuAyollarkiyimi .menuProduck .ContentPage .products img{
+    width: 100%;
+    margin-bottom: 20px;
+}
+.yaction .container .yandexProduct .products .box :is(.sum, .rating, .total, .title),
+.menuAyollarkiyimi .menuProduck .ContentPage .products .box :is(.sum, .rating, .total, .title){
+    width: 100%;
+    margin: 0 auto;
+    text-align: left;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.yaction .container .yandexProduct .products img{
+    width: 250px;
+    height: 200px;
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+.yaction .btn,
+.menuAyollarkiyimi .btns{
+    background: var(--content-color);
+    font-weight: bold;
+    color: var(--light-color);
+    border:none;
+}
+.yaction .btn:hover,
+.menuAyollarkiyimi .btns:hover{
+    opacity: .7;
+    background: var(--content-color);
+    color: var(--light-color);
+    border:none;
+}
+.yaction .produckloader,
+.produckloaderswomen{
+    width: 100%;
+    display: none;
+}
+.yaction .produckloader img,
+.produckloaderswomen img{
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%)translateY(50%);
+    width: 50px;
+    -webkit-transform: translateX(-50%)translateY(50%);
+    -moz-transform: translateX(-50%)translateY(50%);
+    -ms-transform: translateX(-50%)translateY(50%);
+    -o-transform: translateX(-50%)translateY(50%);
+}
+@media(max-width: 991px){
+    .yaction .container{
+        max-width: 100%;
+    }
+    .yaction .container .yandexProduct .products{
+        width: 33%;
+    }
+}
+@media (max-width: 768px) {
+    .yaction .container .yandexProduct .products{
+        width: 50%;
+    }
+    .yaction .yheader h2, .recomended-content h3{
+        font-size: 1.4rem;
+    }
+    .yaction .yheader h4, .recomended-content .full a{
+        font-size: 14px !important;
+    }
+    .yaction .container .yandexProduct .products img{
+        width: 100%;
+        object-fit: cover;
+    }
+}

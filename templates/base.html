@@ -1,0 +1,68 @@
+{% load static  %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loyiha ishi</title>
+    <link rel="icon" href="https://images.zoodmall.com/app/homePageLayout/1653020648128.png">
+    <!-- css mode links -->
+    <link rel="stylesheet" href="{% static '/css/modesite/lightMode.css' %}" class="modesitecss" title="light">
+    <link rel="stylesheet" href="{% static "/css/modesite/darkMode.css" %} " class="modesitecss" title="dark" disabled>
+    <!--Css file links-->
+    <link rel="stylesheet" href="{% static '/css/main.css' %}">
+    <link rel="stylesheet" href="{% static '/css/header.css' %}">
+    <link rel="stylesheet" href="{% static '/css/footer.css' %}">
+    <link rel="stylesheet" href="{% static '/css/section..css/section-menu.css' %}">
+    <link rel="stylesheet" href="{% static '/css/section..css/section-search.css' %}">
+    <link rel="stylesheet" href="{% static '/css/section..css/section-slider.css' %}">
+    <link rel="stylesheet" href="{% static '/css/section..css/time-action.css' %} ">
+    <link rel="stylesheet" href="{% static '/css/section..css/yaction.css' %}">
+    <link rel="stylesheet" href="{% static '/css/section..css/icon-filter.css' %}">
+    <link rel="stylesheet" href="{% static '/css/section..css/new-produck.css' %}">
+    <!--Menu pagelari uchun css link-->
+    <link rel="stylesheet" href="{% static '/css/menupagecss/pages.css' %}">
+    <!--section css-->
+    <link rel="stylesheet" href="{% static '/css/section..css/icon-filter.css' %}">
+    <link rel="stylesheet" href="{% static '/css/section..css/new-produck.css' %}">
+    <link rel="stylesheet" href="{% static '/css/section..css/scroll-menu.css' %}">
+    <!--slider linki-->
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
+    <!-- bootstrap linki -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <!-- JavaScript bootstrap linki -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+    <!--Ion Icons linki-->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <!--box icons linki-->
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body class="active">
+
+
+    {% block content %}
+    {% endblock content %}
+
+    
+    <div class="loader">
+        <img src="https://static.zoodmall.uz/_nuxt/img/zoodmall-logo.1688b2e.svg" alt="" class="">
+    </div>
+    <!--Loader tugashi-->
+
+
+
+
+    <!--- Jquary cdn linki--->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!--Slider js likni-->
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <!--JavaScript code-->
+    <script src="{% static 'css/javascript/script.js'  %}"></script>
+    <!--Slider javascript code-->
+    <script src="{% static 'css/javascript/slider.js'  %}"></script>
+</body>
+
+
+</html>

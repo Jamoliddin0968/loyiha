@@ -1,0 +1,2251 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+    <!-- menu va header qismidagi barcha contentlar  -->
+    <section class="fullheader">
+        <!-- header qismi -->
+        <header class="container-fluid header recom" id="header">
+            <div class="container container-content d-flex justify-content-between">
+                <div class="firts-content d-flex justify-content-center align-items-center mt-1">
+                    <ul class="d-flex p-0"> 
+                        <li class="d-flex justify-content-center align-items-center"><a href=""><ion-icon name="eye-outline"></ion-icon><span>Jozibador takliflar</span></a></li>
+                        <li class="d-flex justify-content-center align-items-center"><a href=""><ion-icon name="star-outline"></ion-icon><span>Mashhur toifalar</span></a></li>
+                        <li class="d-flex justify-content-center align-items-center"><a href=""><ion-icon name="wallet-outline"></ion-icon><span>ZOODMALDA SOTISH</span></a></li>
+                    </ul>
+                </div>
+                <div class="last-content d-flex justify-content-center align-items-center mt-1">
+                    <ul class="d-flex">
+                        <li class="d-flex justify-content-center align-items-center language"><span>UZ</span><ion-icon name="chevron-down-outline"></ion-icon>
+                            <ul class="language-content">
+                                <li>UZ</li>
+                                <li>RU</li>
+                                <li>ENG</li>
+                            </ul>
+                        </li>
+                        <li class="d-flex justify-content-center align-items-center"><ion-icon name="person-outline"></ion-icon><span>Kirish</span></li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+        
+        <!-- scroll header search qismi -->
+        <section class="container-fluid scroll-menu sec-search" id="scroll-menu">
+            <div class="container search-box d-flex justify-content-between align-items-center">
+                <div class="burger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <div class="logo">
+                    <a href="#">
+                        <img src="https://static.zoodmall.uz/_nuxt/img/zoodmall-logo.1688b2e.svg" alt="">
+                    </a>
+                </div>
+                <div class="search">
+                    <input type="text" placeholder="ZoodMall da qidirish">
+                    <ion-icon name="search-sharp"></ion-icon>
+                </div>
+                <div class="like-sell d-flex">
+                    <div class="d-flex justify-content-center align-items-center"><ion-icon name="heart-outline"></ion-icon></div>
+                    <div class="d-flex justify-content-center align-items-center"> <ion-icon name="bag-outline"></ion-icon><span>Savat</span></div>
+                </div>
+            </div>
+        </section>
+
+        <!--  search qismi -->
+        <section class="container-fluid sec-search section-page" id="totop">
+            <div class="container search-box d-flex justify-content-between align-items-center">
+                <div class="burger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <div class="logo">
+                    <a href="#">
+                        <img src="https://static.zoodmall.uz/_nuxt/img/zoodmall-logo.1688b2e.svg" alt="">
+                    </a>
+                </div>
+                <div class="search">
+                    <input type="text" placeholder="ZoodMall da qidirish">
+                    <ion-icon name="search-sharp"></ion-icon>
+                </div>
+                <div class="like-sell d-flex">
+                    <div class="d-flex justify-content-center align-items-center"><ion-icon name="heart-outline"></ion-icon></div>
+                    <div class="d-flex justify-content-center align-items-center"> <ion-icon name="bag-outline"></ion-icon><span>Savat</span></div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- desktop menu qismi -->
+        <section class="container-fluid menu-box section-page" id="menu1">
+            <div class="container">
+                <ul class="d-flex p-0">
+                    <li class="d-flex justify-content-center align-items-center grid-menu   "><a href="#"><ion-icon name="grid-sharp"></ion-icon><span>Barcha kategoriyalar</span><ion-icon name="chevron-down-outline"></ion-icon></a>
+                    </li>
+                    <li class="d-flex justify-content-center align-items-center" onclick="pagereplace(womanpage)" ><span>Ayollar kiyimi</span></li>
+                    <li class="d-flex justify-content-center align-items-center" onclick="pagereplace(manpage)"><span>Erkaklar kiyimi</span></li>
+                    <li class="d-flex justify-content-center align-items-center" onclick="pagereplace(phone)"><span>Telefon va aksesuarlar</span></li>
+                    <li class="d-flex justify-content-center align-items-center" onclick="pagereplace(computer)"><span>Kompyuter va ofis</span></li>
+                    <li class="d-flex justify-content-center align-items-center" onclick="pagereplace(electronic)"><span>Maishiy elektronika</span></li>
+                </ul>
+            </div>
+        </section>
+
+        <div class="container-fluid full-menu-category">
+            <div class="menu-category">
+                <ul class="fullmenu">
+                    <li class="munelist" onclick="pagereplace(womanpage)"><a href="#"><span><img src="https://images.zoodmall.uz/category/1.png" alt=""></span><span>Ayollar kiyimlari</span></a></li>
+                    <li class="munelist" onclick="pagereplace(manpage)"><a href="#"><span><img src="https://images.zoodmall.uz/category/2.png" alt=""></span><span>Erkaklar kiyimlari</span></a></li>
+                    <li class="munelist" onclick="pagereplace(phone)"><a href="#"><span><img src="https://images.zoodmall.uz/category/3.png" alt=""></span><span>Telefon va aksesuarlar</span></a></li>
+                    <li class="munelist" onclick="pagereplace(computer)"><a href="#"><span><img src="https://images.zoodmall.uz/category/4.png" alt=""></span><span>Kompyuter va ofis</span></a></li>
+                    <li class="munelist" onclick="pagereplace(electronic)"><a href="#"><span><img src="https://images.zoodmall.uz/category/5.png" alt=""></span><span>Maishiy Elektronika</span></a></li>
+                    <li class="munelist" onclick="pagereplace(womanpage)"><a href="#"><span><img src="https://images.zoodmall.uz/category/6.png" alt=""></span><span>Zargarlik buyumlari va aksessuarlar</span></a></li>
+                    <li class="munelist" onclick="pagereplace(manpage)"><a href="#"><span><img src="https://images.zoodmall.uz/category/7.png" alt=""></span><span>Uy va bog'</span></a></li>
+                    <li class="munelist" onclick="pagereplace(phone)"><a href="#"><span><img src="https://images.zoodmall.uz/category/8.png" alt=""></span><span>Chamadon va sumkalar</span></a></li>
+                    <li class="munelist" onclick="pagereplace(computer)"><a href="#"><span><img src="https://images.zoodmall.uz/category/9.png" alt=""></span><span>O`yinchoqlar</span></a></li>
+                    <li class="munelist" onclick="pagereplace(electronic)"><a href="#"><span><img src="https://images.zoodmall.uz/category/10.png" alt=""></span><span>Sport va faol dam olish</span></a></li>
+                    <li class="munelist" onclick="pagereplace(womanpage)"><a href="#"><span><img src="https://images.zoodmall.uz/category/11.png" alt=""></span><span>Go'zallik va sog'lik</span></a></li>
+                    <li class="munelist" onclick="pagereplace(manpage)"><a href="#"><span><img src="https://images.zoodmall.uz/category/12.png" alt=""></span><span>Avto va Moto mahsulotlar</span></a></li>
+                    <li class="munelist" onclick="pagereplace(phone)"><a href="#"><span><img src="https://images.zoodmall.uz/category/13.png" alt=""></span><span>Uy jihozlari</span></a></li>
+                    <li class="munelist" onclick="pagereplace(computer)"><a href="#"><span><img src="https://images.zoodmall.uz/category/2028.png" alt=""></span><span>Soch o'stirish va pariklar</span></a></li>
+                    <li class="munelist" onclick="pagereplace(electronic)"><a href="#"><span><img src="https://images.zoodmall.uz/category/2337.png" alt=""></span><span>Mebel</span></a></li>
+                    <li class="munelist" onclick="pagereplace(womanpage)"><a href="#"><span><img src="https://images.zoodmall.uz/category/2383.png" alt=""></span><span>Konselyariya mollari va kitoblar</span></a></li>
+                    <li class="munelist" onclick="pagereplace(manpage)"><a href="#"><span><img src="https://images.zoodmall.uz/category/3091.png" alt=""></span><span>To'ylar va tadbirlar</span></a></li>
+                    <li class="munelist" onclick="pagereplace(phone)"><a href="#"><span><img src="https://images.zoodmall.uz/category/3214.png" alt=""></span><span>Xavfsizlik va himoya</span></a></li>
+                    <li class="munelist" onclick="pagereplace(computer)"><a href="#"><span><img src="https://images.zoodmall.uz/category/3266.png" alt=""></span><span>Maishiy texnika</span></a></li>
+                    <li class="munelist" onclick="pagereplace(electronic)"><a href="#"><span><img src="https://images.zoodmall.uz/category/3467.png" alt=""></span><span>Soatlar</span></a></li>
+                    <li class="munelist" onclick="pagereplace(womanpage)"><a href="#"><span><img src="https://images.zoodmall.uz/category/3664.png" alt=""></span><span>Poyabzallar</span></a></li>
+                    <li class="munelist" onclick="pagereplace(manpage)"><a href="#"><span><img src="https://images.zoodmall.uz/category/4006.png" alt=""></span><span>Bolalar uchun</span></a></li>
+                    <li class="munelist" onclick="pagereplace(phone)"><a href="#"><span><img src="https://images.zoodmall.uz/category/4148.png" alt=""></span><span>Kiyim aksesuarlari</span></a></li>
+                    <li class="munelist" onclick="pagereplace(computer)"><a href="#"><span><img src="https://images.zoodmall.uz/category/4417.png" alt=""></span><span>Chiroqlar va yorug'lik</span></a></li>
+                    <li class="munelist" onclick="pagereplace(electronic)"><a href="#"><span><img src="https://images.zoodmall.uz/category/4523.png" alt=""></span><span>Mahsus kiyimlar</span></a></li>
+                    <li class="munelist" onclick="pagereplace(womanpage)"><a href="#"><span><img src="https://images.zoodmall.uz/category/4562.png" alt=""></span><span>Asboblar</span></a></li>
+                    <li class="munelist" onclick="pagereplace(manpage)"><a href="#"><span><img src="https://images.zoodmall.uz/category/4709.png" alt=""></span><span>Ich kiyim va pijamalar</span></a></li>
+                </ul>
+            </div>
+            <div class="close" id="close">
+
+            </div>
+        </div>
+    </section>
+    <!-- menu va header qismidagi barcha contentlar  tugashi-->
+
+    <!-- asosiy hahifa contentlar-->
+    <section class="Fullcontents" id="#Fullcontents">
+        <section class="container-fluid slider-box" >
+            <div class="container">
+                <div class="swiper mySwiper1">
+                kabellar
+              
+                 <div class="swiper-wrapper">
+                     {% for ad in ads %}
+                     
+                      <div class="swiper-slide"><img src={{ ad.photo.url }} alt=""></div>
+                      {% endfor %}
+                    
+                    </div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-pagination"></div>
+                  </div>
+            </div>
+        </section>
+    
+        <!-- iconli filtr qismi -->
+        <section class="container-fluid icon-filter">
+            <div class="container filter-box mt-5 mb-5">
+                <ul class="p-0 row">
+                    <li class="col-3 mb-4"><a href="#"><div><img src="https://images.zoodmall.com/app/homePageLayout/164878526236.png" alt=""></div><div>Mahalliy Sotuvchilar</div></a></li>
+                    <li class="col-3 mb-4"><a href="#"><div><img src="https://images.zoodmall.com/app/homePageLayout/1651041560386.png" alt=""></div><div>Muddatli to'lov x12</div></a></li>
+                    <li class="col-3 mb-4"><a href="#"><div><img src="https://images.zoodmall.com/app/homePageLayout/1652417024614.png" alt=""></div><div>Xitoydan eng yaxshisi</div></a></li>
+                    <li class="col-3 mb-4"><a href="#"><div><img src="https://images.zoodmall.com/app/homePageLayout/1652417162442.png" alt=""></div><div>Yozgi stil</div></a></li>
+                    <li class="col-3 mb-4"><a href="#"><div><img src="https://images.zoodmall.com/app/homePageLayout/1652417329105.png" alt=""></div><div>Smartfonlar</div></a></li>
+                    <li class="col-3 mb-4"><a href="#"><div><img src="https://images.zoodmall.com/app/homePageLayout/1650860809167.png" alt=""></div><div>Eksklyuziv takliflar</div></a></li>
+                    <li class="col-3 mb-4"><a href="#"><div><img src="https://images.zoodmall.com/app/homePageLayout/1652417453778.jpg" alt=""></div><div>Uy uchun eng yaxshisi</div></a></li>
+                    <li class="col-3 mb-4"><a href="#"><div><img src="https://images.zoodmall.com/app/homePageLayout/1652846341991.png" alt=""></div><div>Cashback</div></a></li>
+                </ul>
+            </div>
+        </section>
+    
+        <!-- Vaqli aksilayar bo`limi-->
+        <section class="container-fluid time-action">
+            <div class="container time-action-box d-flex">
+                <div class="time-limit">
+                    <h3>Smarfonlar muddatli to'lovga</h3>
+                    <div class="time">
+                        <div class="hr">
+                            <span class="hour">00</span>
+                            <small>Soatlar</small>
+                        </div>
+                        <div class="mn">
+                            <span class="minute">00</span>
+                            <small>Daqiqalar</small>
+                        </div>
+                        <div class="sec">
+                            <span class="second">00</span>
+                            <small>Soniyalar</small>
+                        </div>
+                    </div>
+                    <p class="full"><a href="#">Barchasini ko'rsatish</a></p>
+                </div>
+                <div class="action-content">
+                    <div class="swiper mySwiper2">
+                        <div class="swiper-wrapper">    
+                            {% for post in telephone %}
+                            <div class="swiper-slide">
+                              <div class="img">
+                                  <img src={{post.photo.url}} alt="" >
+                              </div>
+                              <div class="action-content-value">
+                                  <div><p>{{post.name}}</p></div>
+                                  <div>
+                                      <div class="d-flex justify-content-between align-items-end"><h3>UZS {{post.price}}</h3><p>x4</p></div>
+                                      <div class="range"></div>
+                                  </div>
+                              </div>
+                            </div>
+                            {% endfor %}
+                            </div>
+                            </div>
+                        <div class="swiper-pagination"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    
+        <!--maishiy texnikalar-->
+        <section class="newProduck mb-5">
+    
+            <section class="container-fluid technique">
+                <div class="container mb-5">
+                    <div class="header-image"><img src="https://images.zoodmall.com/app/homePageLayout/1652416140292.png" alt=""></div>
+                    <div class="technique-contents row">
+                        {% for post in electronics %}
+                            <div class="box col-3"><div><img src={{post.photo.url}} alt=""></div><div>{{post.name}}</div></div>
+                        {% endfor %}    
+                    </div>
+                </div>
+            </section>
+        
+            <!-- 2-slider -->
+        
+            <section class="container-fluid slider-box" >
+                <div class="container">
+                    <div class="swiper mySwiper1">
+                        <div class="swiper-wrapper">
+                          {% for post in ads %}
+                            <div class="swiper-slide"><img src={{post.photo.url}} alt=""></div>
+                          {% endfor %}
+                        </div>
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-pagination"></div>
+                      </div>
+                </div>
+            </section>
+    
+            <!--Recomended-->
+    
+            <section class="container-fluid recommended mt-5 ">
+                <div class="container recomended-content msg">
+                    <div class="d-flex justify-content-between align-items-center mt-2 mb-2">
+                        <h3>Mashhur toifalar</h3>
+                        <p class="full"><a href="#">Barchasini kor'satish <ion-icon name="chevron-forward-outline"></ion-icon></a></p>
+                    </div>
+                    <div class="content d-flex justify-content-around p-4">
+                        {% for post in random %}
+                        <div class="content-box">
+                            <div class="img"><img src={{post.photo.url}} width = '124' height = '124' alt=""></div>
+                            <div>{{post.name}}</div>
+                        </div>
+                        {% endfor %}
+                      
+                    </div>
+                </div>
+                <div class="container recomended-content recomended2-content mt-5">
+                    <div class="d-flex justify-content-between align-items-center mt-2 mb-2">
+                        <h3>Elektronika muddatli to'lovga</h3>
+                        <p class="full"><a href="#">Barchasini kor'satish <ion-icon name="chevron-forward-outline"></ion-icon></a></p>
+                    </div>
+                    <div class="content d-flex justify-content-around p-4">
+
+                        {% for post in tehnique %}
+                        <div class="content-box">
+                            <div class="img"><img src={{post.photo.url}} alt=""></div>
+                            <div class="box">
+                                <div class="title">{{post.name}}</div>
+                                <div class="sum"><b>UZS {{post.price}}</b></div>
+                                <div class="total">
+                                    <p>
+                                        <img src="https://static.zoodmall.uz/_nuxt/img/zoodpay_logo_mini.2bc0960.png" alt="">
+                                        <span>UZS {{post.skidka_price }}</span>
+                                    </p>
+                                    <span>x4</span>
+                                </div>
+                                <div class="rating">
+                                    <f>🤩</f>
+                                    <span>{{post.like_count}}</span>
+                                    <img src="https://images.zoodmall.uz/app/appImages/UZ.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </section>
+    
+        </section>
+    
+    
+        <section class="newProduck mb-5">
+    
+            <section class="container-fluid technique">
+                <div class="container mb-5">
+                    <div class="header-image"><img src="https://images.zoodmall.com/app/homePageLayout/1652416629638.png" alt=""></div>
+                    <div class="technique-contents row">
+                        <div class="box col-3"><div><img src="https://images.zoodmall.com/app/homePageLayout/1652416698795.png" alt=""></div><div>Erkaklar kiyimi</div></div>
+                        <div class="box col-3"><div><img src="https://images.zoodmall.com/app/homePageLayout/1652416755845.png" alt=""></div><div>Ayollar kiyimi</div></div>
+                        <div class="box col-3"><div><img src="https://images.zoodmall.com/app/homePageLayout/1652416816199.png" alt=""></div><div>Yozgi o'yinlar va sport</div></div>
+                        <div class="box col-3"><div><img src="https://images.zoodmall.com/app/homePageLayout/1652416878491.png" alt=""></div><div>Bolalar uchun yozgi mahsulot</div></div>
+                    </div>
+                </div>
+            </section>
+        
+            <!-- 2-slider -->
+        
+            <section class="container-fluid slider-box" >
+                <div class="container">
+                    <div class="swiper mySwiper1">
+                        <div class="swiper-wrapper">
+                            {% for ad in ads %}
+                                <div class="swiper-slide"><img src={{ ad.photo.url }} alt=""></div>
+                            {% endfor %}
+                        </div>
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-pagination"></div>
+                      </div>
+                </div>
+            </section>
+    
+            <!--Recomended-->
+    
+            <section class="container-fluid recommended mt-5 mb-5">
+                <div class="container recomended-content recomended2-content mt-5">
+                    <div class="d-flex justify-content-between align-items-center mt-2 mb-2">
+                        <h3>Elektronika muddatli to'lovga</h3>
+                        <p class="full"><a href="#">Barchasini kor'satish <ion-icon name="chevron-forward-outline"></ion-icon></a></p>
+                    </div>
+                    <div class="content d-flex justify-content-around p-4">
+                        <div class="content-box">
+                            <div class="img"><img src="https://zoodmall.com/cdn-cgi/image/w=500,fit=contain,f=auto/https://upload.zoodmall.com/web/product/picture/0/20296200/165234022328810800091.png" alt=""></div>
+                            <div class="box">
+                                <div class="title">Xiaomi Mi ish stoli monitor 564 654</div>
+                                <div class="sum"><b>UZS 2,290,000</b></div>
+                                <div class="total">
+                                    <p>
+                                        <img src="https://static.zoodmall.uz/_nuxt/img/zoodpay_logo_mini.2bc0960.png" alt="">
+                                        <span>UZS 572,500</span>
+                                    </p>
+                                    <span>x4</span>
+                                </div>
+                                <div class="rating">
+                                    <f>🤩</f>
+                                    <span>5</span>
+                                    <img src="https://images.zoodmall.uz/app/appImages/UZ.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="content-box">
+                            <div class="img"><img src="https://zoodmall.com/cdn-cgi/image/w=500,fit=contain,f=auto/https://upload.zoodmall.com/web/product/picture/38/20444238/165002770773858900249.jpeg" alt=""></div>
+                            <div class="box">
+                                <div class="title"> Smart Watch Xiaomi Amazfit GTR 2 Sport Edition Black + Sovg'a sifatida G.Fordning "Mening hayotim" kitobi o'zbek tilida</div>
+                                <div class="sum"><b>UZS 2,290,000</b></div>
+                                <div class="total">
+                                    <p>
+                                        <img src="https://static.zoodmall.uz/_nuxt/img/zoodpay_logo_mini.2bc0960.png" alt="">
+                                        <span>UZS 572,500</span>
+                                    </p>
+                                    <span>x4</span>
+                                </div>
+                                <div class="rating">
+                                    <f>🤩</f>
+                                    <span>5</span>
+                                    <img src="https://images.zoodmall.uz/app/appImages/UZ.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="content-box">
+                            <div class="img"><img src="https://zoodmall.com/cdn-cgi/image/w=500,fit=contain,f=auto/https://avatars.mds.yandex.net/get-mpic/372220/img_id2364826008393226619/orig" alt=""></div>
+                            <div class="box">
+                                <div class="title">TV Artel LED 43AF90G</div>
+                                <div class="sum"><b>UZS 2,290,000</b></div>
+                                <div class="total">
+                                    <p>
+                                        <img src="https://static.zoodmall.uz/_nuxt/img/zoodpay_logo_mini.2bc0960.png" alt="">
+                                        <span>UZS 572,500</span>
+                                    </p>
+                                    <span>x4</span>
+                                </div>
+                                <div class="rating">
+                                    <f>🤩</f>
+                                    <span>5</span>
+                                    <img src="https://images.zoodmall.uz/app/appImages/UZ.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="content-box">
+                            <div class="img"><img src="https://zoodmall.com/cdn-cgi/image/w=500,fit=contain,f=auto/https://upload.zoodmall.com/web/product/picture/90/20031190/165018442925047500460.jpeg" alt=""></div>
+                            <div class="box">
+                                <div class="title"> Materinskiy plata Asus TUF B365M-PLUS GAMING | LGA1151 v2 | 3 yil Kafolat</div>
+                                <div class="sum"><b>UZS 2,290,000</b></div>
+                                <div class="total">
+                                    <p>
+                                        <img src="https://static.zoodmall.uz/_nuxt/img/zoodpay_logo_mini.2bc0960.png" alt="">
+                                        <span>UZS 572,500</span>
+                                    </p>
+                                    <span>x4</span>
+                                </div>
+                                <div class="rating">
+                                    <f>🤩</f>
+                                    <span>5</span>
+                                    <img src="https://images.zoodmall.uz/app/appImages/UZ.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+    
+        </section>
+    
+        <section class="newProduck mb-5">
+    
+            <section class="container-fluid slider-box" >
+                <div class="container mb-5">
+                    <div class="swiper mySwiper1">
+                        <div class="swiper-wrapper">
+                            {% for ad in ads %}
+                     
+                            <div class="swiper-slide"><img src={{ ad.photo.url }} alt=""></div>
+                            {% endfor %} </div>
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-pagination"></div>
+                      </div>
+                </div>
+    
+    
+                <div class="container brand mt-5">
+                    <div class="swiper mySwiperSlide">
+                        <div class="mb-2 mt-3">
+                            <h2>Mashhur brendlar</h2>
+                        </div>
+                        <div class="btn-box">
+                            <div class="box"><div class="swiper-button-prev"></div></div>
+                            <div class="box"><div class="swiper-button-next"></div></div>
+                        </div>
+                        
+                        <div class="swiper-wrapper">
+                          <div class="swiper-slide slidebox"><img src="https://images.zoodmall.com/app/homePageLayout/1628177496379.png" alt=""><div class="name">Xiaomi</div></div>
+                          <div class="swiper-slide slidebox"><img src="https://images.zoodmall.com/app/homePageLayout/1594989896296.png" alt=""><div class="name">Samsung</div></div>
+                          <div class="swiper-slide slidebox"><img src="https://images.zoodmall.com/app/homePageLayout/1613723411561.png" alt=""><div class="name">Apple</div></div>
+                          <div class="swiper-slide slidebox"><img src="https://images.zoodmall.com/app/homePageLayout/1605625688424.png" alt=""><div class="name">Artel</div></div>
+                          <div class="swiper-slide slidebox"><img src="https://images.zoodmall.com/app/homePageLayout/1638774921287.png" alt=""><div class="name">Lenova</div></div>
+                          <div class="swiper-slide slidebox"><img src="https://images.zoodmall.com/app/homePageLayout/1625573759483.png" alt=""><div class="name">VIVO</div></div>
+                          <div class="swiper-slide slidebox"><img src="https://images.zoodmall.com/app/homePageLayout/1607920423960.png" alt=""><div class="name">Nokia</div></div>
+                          <div class="swiper-slide slidebox"><img src="https://images.zoodmall.com/app/homePageLayout/1594993982190.png" alt=""><div class="name">Huawei</div></div>
+                          <div class="swiper-slide slidebox"><img src="https://images.zoodmall.com/app/homePageLayout/1622007040166.jpg" alt=""><div class="name">Infinix</div></div>
+                          <div class="swiper-slide slidebox"><img src="https://images.zoodmall.com/app/homePageLayout/1634626141786.png" alt=""><div class="name">Realme</div></div>
+                          <div class="swiper-slide slidebox"><img src="https://images.zoodmall.com/app/homePageLayout/1634622199127.png" alt=""><div class="name">Shivaki</div></div>
+                          <div class="swiper-slide slidebox"><img src="https://images.zoodmall.com/app/homePageLayout/1613389547237.png" alt=""><div class="name">LG</div></div>
+                          <div class="swiper-slide slidebox"><img src="https://images.zoodmall.com/app/homePageLayout/1638774885503.png" alt=""><div class="name">NeoLine</div></div>
+                          <div class="swiper-slide slidebox"><img src="https://images.zoodmall.com/app/homePageLayout/1649079523230.png" alt=""><div class="name">Premier</div></div>
+                          <div class="swiper-slide slidebox"><img src="https://images.zoodmall.com/app/homePageLayout/1647581713415.png" alt=""><div class="name">Honor</div></div>
+                          <div class="swiper-slide slidebox"><img src="https://images.zoodmall.com/app/homePageLayout/1638774946538.png" alt=""><div class="name">Magicar</div></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+    
+        </section>
+    
+    
+        <section class="container-fluid yaction mt-2">
+            <div class="container">
+                <div class="yheader d-flex justify-content-between align-items-center">
+                    <h2>💥90 kunlik YandexPlus obunasi💥</h2>
+                    <h4 class="d-flex justify-content-center align-items-center">Hammasini ko'rsatish <ion-icon name="chevron-forward-outline"></ion-icon></h4>
+                </div>
+                <div class="yandexProduct row">
+
+                    {% for post in all %}
+                    <div class="products col-3">
+                        <div class="img"><img src={{post.photo.url}} alt=""></div>
+                            <div class="box">
+                                <div class="title">X{{post.name}}</div>
+                                <div class="sum"><b>UZS {{post.price}}</b></div>
+                                <div class="total">
+                                    <p>
+                                        <img src="https://static.zoodmall.uz/_nuxt/img/zoodpay_logo_mini.2bc0960.png" alt="">
+                                        <span>UZS {{post.skidka_price}}</span>
+                                    </p>
+                                    <span>x4</span>
+                                </div>
+                                <div class="rating">
+                                    <f>🤩</f>
+                                    <span>{{post.like_count}}</span>
+                                    <img src="https://images.zoodmall.uz/app/appImages/UZ.png" alt="">
+                                </div>
+                            </div>
+                    </div>
+                    {% endfor %}
+
+                </div>
+
+                <div class="produckloader produckloaderbtn">
+                    <img src="/images/loader.gif" alt="">
+                </div>
+                <div class="m-5 d-flex justify-content-center">
+                    <div class="btn" onclick="button()">Boshqalarini ko'rish</div>
+                </div>
+            </div>
+        </section>
+    </section>
+    <!-- asosiy hahifa contentlar tugashi-->
+
+    <!-- sahifalar o`zgarganda chiqadigan loader-->
+    <div class="produckloader produckloaders one">
+        <img class="gif" src="/images/loader.gif" alt="">
+    </div>
+    <!-- sahifalar o`zgarganda chiqadigan loader tugashi-->
+
+    <!-- qo`shimcha page-->
+                <section class="menuAyollarkiyimi" id="menuAyollarkiyimi" style="display: none;">
+        <div class="container-fluid menuAyollarkiyimi mb-5">
+            <div class="container">
+                <div class="pageLink d-flex mt-3 mb-3 "><span><span  onclick="pagereplace(homepage)">ZoodMall</></span>/</span><span>Ayollar kiyimi</span></div>
+                <div class="menuProduck row">
+                    <div class="fulls" style="display: none; font-weight: 700; font-size: 18px;">Ayollar kiyimi</div>
+                    <script>$('.fulls').click(function(){
+                        $('.menuPage').slideToggle("slow");
+                    })</script>
+                    <div class="menuPage col-3">
+                        <li class="lists">
+                            <div><span>Tepa qism kiyimlari va futbolkalar</span>
+                                <ion-icon name="chevron-down-outline" class="menuchevron"></ion-icon></div>
+                            <ul class="lists-box">
+                                <li><span>Hammasini ko`rsatish</span></li>
+                                <li><span>Futbolkalar</span></li>
+                                <li><span>Ko`ylaklar</span></li>
+                            </ul>
+                        </li>
+                        <li class="lists">
+                            <div><span>Kurtka va paltolar</span>
+                                <ion-icon name="chevron-down-outline" class="menuchevron"></ion-icon></div>
+                            <ul class="lists-box">
+                                <li><span>Hammasini ko`rsatish</span></li>
+                                <li><span>Parkalar</span></li>
+                                <li><span>Sun`iy mo`yna</span></li>
+                            </ul>
+                        </li>
+                        <li class="lists">
+                            <div><span>Sviterlar</span>
+                                <ion-icon name="chevron-down-outline" class="menuchevron"></ion-icon></div>
+                            <ul class="lists-box">
+                                <li><span>Hammasini ko`rsatish</span></li>
+                                <li><span>Kardiganlar</span></li>
+                                <li><span>Puloverlar</span></li>
+                            </ul>
+                        </li>
+                        <li class="alink"><div>Xudi va tolstovkalar</div></li>
+                        <li class="alink"><div>Bodilar</div></li>
+                        <li class="lists">
+                            <div><span>Yubkalar</span>
+                                <ion-icon name="chevron-down-outline" class="menuchevron"></ion-icon></div>
+                            <ul class="lists-box">
+                                <li><span>Hammasini ko`rsatish</span></li>
+                                <li><span>A-shakldagi yubkalar</span></li>
+                                <li><span>Bal yubkalar</span></li>
+                            </ul>
+                        </li>
+                        <li class="lists">
+                            <div><span>Sviterlar</span>
+                                <ion-icon name="chevron-down-outline" class="menuchevron"></ion-icon></div>
+                            <ul class="lists-box">
+                                <li><span>Hammasini ko`rsatish</span></li>
+                                <li><span>Shortilar</span></li>
+                                <li><span>Shortilar</span></li>
+                                <li><span>Shortilar</span></li>
+                                <li><span>Shortilar</span></li>
+                                <li><span>Shortilar</span></li>
+                                <li><span>Shortilar</span></li>
+                                <li><span>Shortilar</span></li>
+                                <li><span>Shortilar</span></li>
+                            </ul>
+                        </li>
+                        <li class="lists">
+                            <div><span>Ko`ylaklar</span>
+                                <ion-icon name="chevron-down-outline" class="menuchevron"></ion-icon></div>
+                            <ul class="lists-box">
+                                <li><span>Hammasini ko`rsatish</span></li>
+                                <li><span>Ko`ylaklar</span></li>
+                                <li><span>Ko`ylaklar</span></li>
+                                <li><span>Ko`ylaklar</span></li>
+                                <li><span>Ko`ylaklar</span></li>
+                                <li><span>Ko`ylaklar</span></li>
+                            </ul>
+                        </li>
+                        <li class="lists">
+                            <div><span>Jinsi shimlar</span>
+                                <ion-icon name="chevron-down-outline" class="menuchevron"></ion-icon></div>
+                            <ul class="lists-box">
+                                <li><span>Hammasini ko`rsatish</span></li>
+                                <li><span>Jinsi shimlar</span></li>
+                                <li><span>Jinsi shimlar</span></li>
+                                <li><span>Jinsi shimlar</span></li>
+                            </ul>
+                        </li>
+                        <li class="lists">
+                            <div><span>Kombinezonlar</span>
+                                <ion-icon name="chevron-down-outline" class="menuchevron"></ion-icon></div>
+                            <ul class="lists-box">
+                                <li><span>Hammasini ko`rsatish</span></li>
+                            </ul>
+                        </li>
+                        <li class="lists">
+                            <div><span>Kostyumlar va to'plamlar</span>
+                                <ion-icon name="chevron-down-outline" class="menuchevron"></ion-icon></div>
+                            <ul class="lists-box">
+                                <li><span>Hammasini ko`rsatish</span></li>
+                            </ul>
+                        </li>
+                        <li class="lists">
+                            <div><span>Bluzka va ko'ylaklar</span>
+                                <ion-icon name="chevron-down-outline" class="menuchevron"></ion-icon></div>
+                            <ul class="lists-box">
+                                <li><span>Hammasini ko`rsatish</span></li>
+                                <li><span>Bluzka va ko'ylaklar</span></li>
+                                <li><span>Bluzka</span></li>
+                                <li><span>Ko'ylaklar</span></li>
+                            </ul>
+                        </li>
+                    </div>
+                    <div class="ContentPage col-9 row p-0">
+                        
+                        <div class="products col-4">
+                            <div class="img"><img src="https://zoodmall.com/cdn-cgi/image/w=500,fit=contain,f=auto/https://upload.zoodmall.com/web/product/picture/65/20034165/165174204663320200001.jpeg" alt=""></div>
+                                <div class="box">
+                                    <div class="title">Ayollar kiyimi</div>
+                                    <div class="sum"><b>UZS 2,290,000</b></div>
+                                    <div class="total">
+                                        <p>
+                                            <img src="https://static.zoodmall.uz/_nuxt/img/zoodpay_logo_mini.2bc0960.png" alt="">
+                                            <span>UZS 572,500</span>
+                                        </p>
+                                        <span>x4</span>
+                                    </div>
+                                    <div class="rating">
+                                        <f>🤩</f>
+                                        <span>5</span>
+                                        <img src="https://images.zoodmall.uz/app/appImages/UZ.png" alt="">
+                                    </div>
+                                </div>
+                        </div>
+                        <div class="products col-4">
+                            <div class="img"><img src="https://zoodmall.com/cdn-cgi/image/w=500,fit=contain,f=auto/https://upload.zoodmall.com/web/product/picture/64/20034164/165174198290444300770.jpeg" alt=""></div>
+                                <div class="box">
+                                    <div class="title">Ayollar kiyimi</div>
+                                    <div class="sum"><b>UZS 2,290,000</b></div>
+                                    <div class="total">
+                                        <p>
+                                            <img src="https://static.zoodmall.uz/_nuxt/img/zoodpay_logo_mini.2bc0960.png" alt="">
+                                            <span>UZS 572,500</span>
+                                        </p>
+                                        <span>x4</span>
+                                    </div>
+                                    <div class="rating">
+                                        <f>🤩</f>
+                                        <span>5</span>
+                                        <img src="https://images.zoodmall.uz/app/appImages/UZ.png" alt="">
+                                    </div>
+                                </div>
+                        </div>
+                        <div class="products col-4">
+                            <div class="img"><img src="https://zoodmall.com/cdn-cgi/image/w=500,fit=contain,f=auto/https://upload.zoodmall.com/web/product/picture/63/20034163/165174233916764400016.jpeg" alt=""></div>
+                                <div class="box">
+                                    <div class="title">Ayollar kiyimi</div>
+                                    <div class="sum"><b>UZS 2,290,000</b></div>
+                                    <div class="total">
+                                        <p>
+                                            <img src="https://static.zoodmall.uz/_nuxt/img/zoodpay_logo_mini.2bc0960.png" alt="">
+                                            <span>UZS 572,500</span>
+                                        </p>
+                                        <span>x4</span>
+                                    </div>
+                                    <div class="rating">
+                                        <f>🤩</f>
+                                        <span>5</span>
+                                        <img src="https://images.zoodmall.uz/app/appImages/UZ.png" alt="">
+                                    </div>
+                                </div>
+                        </div>
+                        <div class="products col-4">
+                            <div class="img"><img src="https://zoodmall.com/cdn-cgi/image/w=500,fit=contain,f=auto/https://upload.zoodmall.com/web/product/picture/62/20034162/165174187253234200339.jpeg" alt=""></div>
+                                <div class="box">
+                                    <div class="title">Ayollar kiyimi</div>
+                                    <div class="sum"><b>UZS 2,290,000</b></div>
+                                    <div class="total">
+                                        <p>
+                                            <img src="https://static.zoodmall.uz/_nuxt/img/zoodpay_logo_mini.2bc0960.png" alt="">
+                                            <span>UZS 572,500</span>
+                                        </p>
+                                        <span>x4</span>
+                                    </div>
+                                    <div class="rating">
+                                        <f>🤩</f>
+                                        <span>5</span>
+                                        <img src="https://images.zoodmall.uz/app/appImages/UZ.png" alt="">
+                                    </div>
+                                </div>
+                        </div>
+                        <div class="products col-4">
+                            <div class="img"><img src="https://zoodmall.com/cdn-cgi/image/w=500,fit=contain,f=auto/https://upload.zoodmall.com/web/product/picture/57/20034157/165174183249823200183.jpeg" alt=""></div>
+                                <div class="box">
+                                    <div class="title">Ayollar kiyimi</div>
+                                    <div class="sum"><b>UZS 2,290,000</b></div>
+                                    <div class="total">
+                                        <p>
+                                            <img src="https://static.zoodmall.uz/_nuxt/img/zoodpay_logo_mini.2bc0960.png" alt="">
+                                            <span>UZS 572,500</span>
+                                        </p>
+                                        <span>x4</span>
+                                    </div>
+                                    <div class="rating">
+                                        <f>🤩</f>
+                                        <span>5</span>
+                                        <img src="https://images.zoodmall.uz/app/appImages/UZ.png" alt="">
+                                    </div>
+                                </div>
+                        </div>
+                        <div class="products col-4">
+                            <div class="img"><img src="https://zoodmall.com/cdn-cgi/image/w=500,fit=contain,f=auto/https://upload.zoodmall.com/web/product/picture/55/20034155/165174180960851100982.jpeg" alt=""></div>
+                                <div class="box">
+                                    <div class="title">Ayollar kiyimi</div>
+                                    <div class="sum"><b>UZS 2,290,000</b></div>
+                                    <div class="total">
+                                        <p>
+                                            <img src="https://static.zoodmall.uz/_nuxt/img/zoodpay_logo_mini.2bc0960.png" alt="">
+                                            <span>UZS 572,500</span>
+                                        </p>
+                                        <span>x4</span>
+                                    </div>
+                                    <div class="rating">
+                                        <f>🤩</f>
+                                        <span>5</span>
+                                        <img src="https://images.zoodmall.uz/app/appImages/UZ.png" alt="">
+                                    </div>
+                                </div>
+                        </div>
+                        <div class="products col-4">
+                            <div class="img"><img src="https://zoodmall.com/cdn-cgi/image/w=500,fit=contain,f=auto/https://upload.zoodmall.com/web/product/picture/53/20034153/165174179197108500171.jpeg" alt=""></div>
+                                <div class="box">
+                                    <div class="title">Ayollar kiyimi</div>
+                                    <div class="sum"><b>UZS 2,290,000</b></div>
+                                    <div class="total">
+                                        <p>
+                                            <img src="https://static.zoodmall.uz/_nuxt/img/zoodpay_logo_mini.2bc0960.png" alt="">
+                                            <span>UZS 572,500</span>
+                                        </p>
+                                        <span>x4</span>
+                                    </div>
+                                    <div class="rating">
+                                        <f>🤩</f>
+                                        <span>5</span>
+                                        <img src="https://images.zoodmall.uz/app/appImages/UZ.png" alt="">
+                                    </div>
+                                </div>
+                        </div>
+                        <div class="products col-4">
+                            <div class="img"><img src="https://zoodmall.com/cdn-cgi/image/w=500,fit=contain,f=auto/https://upload.zoodmall.com/web/product/picture/50/20034150/165174177210812400127.jpeg" alt=""></div>
+                                <div class="box">
+                                    <div class="title">Ayollar kiyimi</div>
+                                    <div class="sum"><b>UZS 2,290,000</b></div>
+                                    <div class="total">
+                                        <p>
+                                            <img src="https://static.zoodmall.uz/_nuxt/img/zoodpay_logo_mini.2bc0960.png" alt="">
+                                            <span>UZS 572,500</span>
+                                        </p>
+                                        <span>x4</span>
+                                    </div>
+                                    <div class="rating">
+                                        <f>🤩</f>
+                                        <span>5</span>
+                                        <img src="https://images.zoodmall.uz/app/appImages/UZ.png" alt="">
+                                    </div>
+                                </div>
+                        </div>
+                        <div class="products col-4">
+                            <div class="img"><img src="https://zoodmall.com/cdn-cgi/image/w=500,fit=contain,f=auto/https://upload.zoodmall.com/web/product/picture/91/19946891/165174173716844400647.jpeg" alt=""></div>
+                                <div class="box">
+                                    <div class="title">Ayollar kiyimi</div>
+                                    <div class="sum"><b>UZS 2,290,000</b></div>
+                                    <div class="total">
+                                        <p>
+                                            <img src="https://static.zoodmall.uz/_nuxt/img/zoodpay_logo_mini.2bc0960.png" alt="">
+                                            <span>UZS 572,500</span>
+                                        </p>
+                                        <span>x4</span>
+                                    </div>
+                                    <div class="rating">
+                                        <f>🤩</f>
+                                        <span>5</span>
+                                        <img src="https://images.zoodmall.uz/app/appImages/UZ.png" alt="">
+                                    </div>
+                                </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="produckloader produckloaderswomen ">
+                    <img src="/images/loader.gif" alt="">
+                </div>
+                <div class="fullpost d-flex justify-content-center m-5">
+                    <div class="btn btns" onclick="womenproduck(produckwomen)">Ko`proq ko`rish</div>
+                </div>
+            </div>
+            <script>
+                $(".lists").each(function (indexlists) {
+                    $(this).on("click", function () {
+                        $(".lists-box").each(function (indexbox) {
+                        if (indexlists == indexbox) {
+                            $(this).slideToggle(200);
+                        } else {
+                            $(this).slideUp(200);
+                        }
+                        });
+                        $(".menuchevron").each(function (value) {
+                        if (indexlists == value) {
+                            $(this).toggleClass("active");
+                        } else {
+                            $(this).removeClass("active");
+                        }
+                        });
+                    });
+                    });
+           </script>
+        </div>
+                </section>
+
+                <section class="Erkaklarkiyimi" id="Erkaklarkiyimi" style="display: none;">
+                    <div class="container-fluid menuAyollarkiyimi mb-5">
+                        <div class="container">
+                            <div class="pageLink d-flex mt-3 mb-3 "><span><span  onclick="pagereplace(homepage)">ZoodMall</></span>/</span><span>Erkaklar kiyimi</span></div>
+                            <div class="menuProduck row">
+                                <div class="fulls" style="display: none; font-weight: 700; font-size: 18px;">Erkaklar kiyimi</div>
+                                <script>$('.fulls').click(function(){
+                                    $('.menuPage').slideToggle("slow");
+                                })</script>
+                                <div class="menuPage col-3">
+                                    <li class="lists">
+                                        <div><span>Tepa qism kiyimlari va futbolkalar</span>
+                                            <ion-icon name="chevron-down-outline" class="menuchevron"></ion-icon></div>
+                                        <ul class="lists-box">
+                                            <li><span>Hammasini ko`rsatish</span></li>
+                                            <li><span>Futbolkalar</span></li>
+                                            <li><span>Ko`ylaklar</span></li>
+                                            <li><span>Futbolkalar</span></li>
+                                            <li><span>Ko`ylaklar</span></li>
+                                            <li><span>Futbolkalar</span></li>
+                                            <li><span>Ko`ylaklar</span></li>
+                                            <li><span>Futbolkalar</span></li>
+                                            <li><span>Ko`ylaklar</span></li>
+                                        </ul>
+                                    </li>
+                                    <li class="lists">
+                                        <div><span>Kurtka va paltolar</span>
+                                            <ion-icon name="chevron-down-outline" class="menuchevron"></ion-icon></div>
+                                        <ul class="lists-box">
+                                            <li><span>Hammasini ko`rsatish</span></li>
+                                            <li><span>Parkalar</span></li>
+                                            <li><span>Sun`iy mo`yna</span></li>
+                                            <li><span>Parkalar</span></li>
+                                            <li><span>Sun`iy mo`yna</span></li>
+                                            <li><span>Parkalar</span></li>
+                                            <li><span>Sun`iy mo`yna</span></li>
+                                            <li><span>Parkalar</span></li>
+                                            <li><span>Sun`iy mo`yna</span></li>
+                                            <li><span>Parkalar</span></li>
+                                            <li><span>Sun`iy mo`yna</span></li>
+                                        </ul>
+                                    </li>
+                                    <li class="lists">
+                                        <div><span>Sviterlar</span>
+                                            <ion-icon name="chevron-down-outline" class="menuchevron"></ion-icon></div>
+                                        <ul class="lists-box">
+                                            <li><span>Hammasini ko`rsatish</span></li>
+                                            <li><span>Kardiganlar</span></li>
+                                            <li><span>Puloverlar</span></li>
+                                            <li><span>Kardiganlar</span></li>
+                                            <li><span>Puloverlar</span></li>
+                                            <li><span>Kardiganlar</span></li>
+                                            <li><span>Puloverlar</span></li>
+                                            <li><span>Kardiganlar</span></li>
+                                            <li><span>Puloverlar</span></li>
+                                            <li><span>Kardiganlar</span></li>
+                                            <li><span>Puloverlar</span></li>
+                                        </ul>
+                                    </li>
+                                    <li class="alink"><div>Xudi va tolstovkalar</div></li>
+                                    <li class="lists">
+                                        <div><span>Sviterlar</span>
+                                            <ion-icon name="chevron-down-outline" class="menuchevron"></ion-icon></div>
+                                        <ul class="lists-box">
+                                            <li><span>Hammasini ko`rsatish</span></li>
+                                            <li><span>Shortilar</span></li>
+                                            <li><span>Shortilar</span></li>
+                                            <li><span>Shortilar</span></li>
+                                            <li><span>Shortilar</span></li>
+                                            <li><span>Shortilar</span></li>
+                                        </ul>
+                                    </li>
+                                    <li class="lists">
+                                        <div><span>Ko`ylaklar</span>
+                                            <ion-icon name="chevron-down-outline" class="menuchevron"></ion-icon></div>
+                                        <ul class="lists-box">
+                                            <li><span>Hammasini ko`rsatish</span></li>
+                                            <li><span>Ko`ylaklar</span></li>
+                                            <li><span>Ko`ylaklar</span></li>
+                                            <li><span>Ko`ylaklar</span></li>
+                                            <li><span>Ko`ylaklar</span></li>
+                                            <li><span>Ko`ylaklar</span></li>
+                                        </ul>
+                                    </li>
+                                    <li class="lists">
+                                        <div><span>Jinsi shimlar</span>
+                                            <ion-icon name="chevron-down-outline" class="menuchevron"></ion-icon></div>
+                                        <ul class="lists-box">
+                                            <li><span>Hammasini ko`rsatish</span></li>
+                                            <li><span>Jinsi shimlar</span></li>
+                                            <li><span>Jinsi shimlar</span></li>
+                                            <li><span>Jinsi shimlar</span></li>
+                                            <li><span>Jinsi shimlar</span></li>
+                                            <li><span>Jinsi shimlar</span></li>
+                                        </ul>
+                                    </li>
+                                    <li class="lists">
+                                        <div><span>Kombinezonlar</span>
+                                            <ion-icon name="chevron-down-outline" class="menuchevron"></ion-icon></div>
+                                        <ul class="lists-box">
+                                            <li><span>Hammasini ko`rsatish</span></li>
+                                            <li><span>Hammasini ko`rsatish</span></li>
+                                            <li><span>Hammasini ko`rsatish</span></li>
+                                        </ul>
+                                    </li>
+                                    <li class="lists">
+                                        <div><span>Kostyumlar va to'plamlar</span>
+                                            <ion-icon name="chevron-down-outline" class="menuchevron"></ion-icon></div>
+                                        <ul class="lists-box">
+                                            <li><span>Hammasini ko`rsatish</span></li>
+                                        </ul>
+                                    </li>
+                                </div>
+                                <div class="ContentPage  ContentPageman col-9 row p-0">
+                                    
+                                    <div class="products col-4">
+                                        <div class="img"><img src="https://zoodmall.com/cdn-cgi/image/w=500,fit=contain,f=auto/https://upload.zoodmall.com/web/product/picture/22/20352122/165112178173910800486.png" alt=""></div>
+                                            <div class="box">
+                                                <div class="title">Erkaklar kiyimi</div>
+                                                <div class="sum"><b>UZS 2,290,000</b></div>
+                                                <div class="total">
+                                                    <p>
+                                                        <img src="https://static.zoodmall.uz/_nuxt/img/zoodpay_logo_mini.2bc0960.png" alt="">
+                                                        <span>UZS 572,500</span>
+                                                    </p>
+                                                    <span>x4</span>
+                                                </div>
+                                                <div class="rating">
+                                                    <f>🤩</f>
+                                                    <span>5</span>
+                                                    <img src="https://images.zoodmall.uz/app/appImages/UZ.png" alt="">
+                                                </div>
+                                            </div>
+                                    </div>
+                                    <div class="products col-4">
+                                        <div class="img"><img src="https://zoodmall.com/cdn-cgi/image/w=500,fit=contain,f=auto/https://upload.zoodmall.com/web/product/picture/0/20352100/165112229273620900316.png" alt=""></div>
+                                            <div class="box">
+                                                <div class="title">Erkaklar kiyimi</div>
+                                                <div class="sum"><b>UZS 2,290,000</b></div>
+                                                <div class="total">
+                                                    <p>
+                                                        <img src="https://static.zoodmall.uz/_nuxt/img/zoodpay_logo_mini.2bc0960.png" alt="">
+                                                        <span>UZS 572,500</span>
+                                                    </p>
+                                                    <span>x4</span>
+                                                </div>
+                                                <div class="rating">
+                                                    <f>🤩</f>
+                                                    <span>5</span>
+                                                    <img src="https://images.zoodmall.uz/app/appImages/UZ.png" alt="">
+                                                </div>
+                                            </div>
+                                    </div>
+                                    <div class="products col-4">
+                                        <div class="img"><img src="https://zoodmall.com/cdn-cgi/image/w=500,fit=contain,f=auto/https://upload.zoodmall.com/web/product/picture/83/20352083/165112263383130100642.png" alt=""></div>
+                                            <div class="box">
+                                                <div class="title">Erkaklar kiyimi</div>
+                                                <div class="sum"><b>UZS 2,290,000</b></div>
+                                                <div class="total">
+                                                    <p>
+                                                        <img src="https://static.zoodmall.uz/_nuxt/img/zoodpay_logo_mini.2bc0960.png" alt="">
+                                                        <span>UZS 572,500</span>
+                                                    </p>
+                                                    <span>x4</span>
+                                                </div>
+                                                <div class="rating">
+                                                    <f>🤩</f>
+                                                    <span>5</span>
+                                                    <img src="https://images.zoodmall.uz/app/appImages/UZ.png" alt="">
+                                                </div>
+                                            </div>
+                                    </div>
+                                    <div class="products col-4">
+                                        <div class="img"><img src="https://zoodmall.com/cdn-cgi/image/w=500,fit=contain,f=auto/https://upload.zoodmall.com/web/product/picture/82/20352082/165112265118672600341.png" alt=""></div>
+                                            <div class="box">
+                                                <div class="title">Erkaklar kiyimi</div>
+                                                <div class="sum"><b>UZS 2,290,000</b></div>
+                                                <div class="total">
+                                                    <p>
+                                                        <img src="https://static.zoodmall.uz/_nuxt/img/zoodpay_logo_mini.2bc0960.png" alt="">
+                                                        <span>UZS 572,500</span>
+                                                    </p>
+                                                    <span>x4</span>
+                                                </div>
+                                                <div class="rating">
+                                                    <f>🤩</f>
+                                                    <span>5</span>
+                                                    <img src="https://images.zoodmall.uz/app/appImages/UZ.png" alt="">
+                                                </div>
+                                            </div>
+                                    </div>
+                                    <div class="products col-4">
+                                        <div class="img"><img src="https://zoodmall.com/cdn-cgi/image/w=500,fit=contain,f=auto/https://upload.zoodmall.com/web/product/picture/77/20352077/165112274680249100304.png" alt=""></div>
+                                            <div class="box">
+                                                <div class="title">Erkaklar kiyimi</div>
+                                                <div class="sum"><b>UZS 2,290,000</b></div>
+                                                <div class="total">
+                                                    <p>
+                                                        <img src="https://static.zoodmall.uz/_nuxt/img/zoodpay_logo_mini.2bc0960.png" alt="">
+                                                        <span>UZS 572,500</span>
+                                                    </p>
+                                                    <span>x4</span>
+                                                </div>
+                                                <div class="rating">
+                                                    <f>🤩</f>
+                                                    <span>5</span>
+                                                    <img src="https://images.zoodmall.uz/app/appImages/UZ.png" alt="">
+                                                </div>
+                                            </div>
+                                    </div>
+                                    <div class="products col-4">
+                                        <div class="img"><img src="https://zoodmall.com/cdn-cgi/image/w=500,fit=contain,f=auto/https://upload.zoodmall.com/web/product/picture/62/20352062/165112494339416800393.png" alt=""></div>
+                                            <div class="box">
+                                                <div class="title">Erkaklar kiyimi</div>
+                                                <div class="sum"><b>UZS 2,290,000</b></div>
+                                                <div class="total">
+                                                    <p>
+                                                        <img src="https://static.zoodmall.uz/_nuxt/img/zoodpay_logo_mini.2bc0960.png" alt="">
+                                                        <span>UZS 572,500</span>
+                                                    </p>
+                                                    <span>x4</span>
+                                                </div>
+                                                <div class="rating">
+                                                    <f>🤩</f>
+                                                    <span>5</span>
+                                                    <img src="https://images.zoodmall.uz/app/appImages/UZ.png" alt="">
+                                                </div>
+                                            </div>
+                                    </div>
+                                    <div class="products col-4">
+                                        <div class="img"><img src="https://zoodmall.com/cdn-cgi/image/w=500,fit=contain,f=auto/https://upload.zoodmall.com/web/product/picture/61/20352061/165112497052874000650.png" alt=""></div>
+                                            <div class="box">
+                                                <div class="title">Erkaklar kiyimi</div>
+                                                <div class="sum"><b>UZS 2,290,000</b></div>
+                                                <div class="total">
+                                                    <p>
+                                                        <img src="https://static.zoodmall.uz/_nuxt/img/zoodpay_logo_mini.2bc0960.png" alt="">
+                                                        <span>UZS 572,500</span>
+                                                    </p>
+                                                    <span>x4</span>
+                                                </div>
+                                                <div class="rating">
+                                                    <f>🤩</f>
+                                                    <span>5</span>
+                                                    <img src="https://images.zoodmall.uz/app/appImages/UZ.png" alt="">
+                                                </div>
+                                            </div>
+                                    </div>
+                                    <div class="products col-4">
+                                        <div class="img"><img src="https://zoodmall.com/cdn-cgi/image/w=500,fit=contain,f=auto/https://upload.zoodmall.com/web/product/picture/60/20352060/165112498729186700885.png" alt=""></div>
+                                            <div class="box">
+                                                <div class="title">Erkaklar kiyimi</div>
+                                                <div class="sum"><b>UZS 2,290,000</b></div>
+                                                <div class="total">
+                                                    <p>
+                                                        <img src="https://static.zoodmall.uz/_nuxt/img/zoodpay_logo_mini.2bc0960.png" alt="">
+                                                        <span>UZS 572,500</span>
+                                                    </p>
+                                                    <span>x4</span>
+                                                </div>
+                                                <div class="rating">
+                                                    <f>🤩</f>
+                                                    <span>5</span>
+                                                    <img src="https://images.zoodmall.uz/app/appImages/UZ.png" alt="">
+                                                </div>
+                                            </div>
+                                    </div>
+                                    <div class="products col-4">
+                                        <div class="img"><img src="https://zoodmall.com/cdn-cgi/image/w=500,fit=contain,f=auto/https://upload.zoodmall.com/web/product/picture/59/20352059/165112500498678200544.png" alt=""></div>
+                                            <div class="box">
+                                                <div class="title">Erkaklar kiyimi</div>
+                                                <div class="sum"><b>UZS 2,290,000</b></div>
+                                                <div class="total">
+                                                    <p>
+                                                        <img src="https://static.zoodmall.uz/_nuxt/img/zoodpay_logo_mini.2bc0960.png" alt="">
+                                                        <span>UZS 572,500</span>
+                                                    </p>
+                                                    <span>x4</span>
+                                                </div>
+                                                <div class="rating">
+                                                    <f>🤩</f>
+                                                    <span>5</span>
+                                                    <img src="https://images.zoodmall.uz/app/appImages/UZ.png" alt="">
+                                                </div>
+                                            </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="produckloader produckloaderswomen ">
+                                <img src="/images/loader.gif" alt="">
+                            </div>
+                            <div class="fullpost d-flex justify-content-center m-5">
+                                <div class="btn btns" onclick="womenproduck(produckman)">Ko`proq ko`rish</div>
+                            </div>
+                        </div>
+                        <script>
+                            $(".lists").each(function (indexlists) {
+                                $(this).on("click", function () {
+                                    $(".lists-box").each(function (indexbox) {
+                                    if (indexlists == indexbox) {
+                                        $(this).slideToggle(200);
+                                    } else {
+                                        $(this).slideUp(200);
+                                    }
+                                    });
+                                    $(".menuchevron").each(function (value) {
+                                    if (indexlists == value) {
+                                        $(this).toggleClass("active");
+                                    } else {
+                                        $(this).removeClass("active");
+                                    }
+                                    });
+                                });
+                                });
+                    </script>
+                    </div>
+                </section>
+
+
+                <section class="phone" id="phone" style="display: none;">
+                    <div class="container-fluid menuAyollarkiyimi mb-5">
+                        <div class="container">
+                            <div class="pageLink d-flex mt-3 mb-3 "><span><span  onclick="pagereplace(homepage)">ZoodMall</></span>/</span><span>Telefon va aksessuarlar</span></div>
+                            <div class="menuProduck row">
+                                <div class="fulls" style="display: none; font-weight: 700; font-size: 18px;">Telefon va aksessuarlar</div>
+                                <script>$('.fulls').click(function(){
+                                    $('.menuPage').slideToggle("slow");
+                                })</script>
+                                <div class="menuPage col-3">
+                                    <li class="lists">
+                                        <div><span>Telefon uchun g`iloflar</span>
+                                            <ion-icon name="chevron-down-outline" class="menuchevron"></ion-icon></div>
+                                        <ul class="lists-box">
+                                            <li><span>Hammasini ko`rsatish</span></li>
+                                            <li><span>Qopqoq g`ilof</span></li>
+                                            <li><span>Flip g`ilof</span></li>
+                                            <li><span>Qopqoq g`ilof</span></li>
+                                            <li><span>Flip g`ilof</span></li>
+                                            <li><span>Qopqoq g`ilof</span></li>
+                                            <li><span>Flip g`ilof</span></li>
+                                            <li><span>Qopqoq g`ilof</span></li>
+                                            <li><span>Flip g`ilof</span></li>
+                                        </ul>
+                                    </li>
+                                    <li class="alink"><div>Smartfonlar</div></li>
+                                    <li class="lists">
+                                        <div><span>Telefon uchun ehtiyot qismlar</span>
+                                            <ion-icon name="chevron-down-outline" class="menuchevron"></ion-icon></div>
+                                        <ul class="lists-box">
+                                            <li><span>Hammasini ko`rsatish</span></li>
+                                            <li><span>Telefonlar uchun egiluvchan kabellar</span></li>
+                                            <li><span>Telefonlar uchun LCD ekranlar</span></li>
+                                            <li><span>Telefonlar uchun egiluvchan kabellar</span></li>
+                                            <li><span>Telefonlar uchun LCD ekranlar</span></li>
+                                            <li><span>Telefonlar uchun egiluvchan kabellar</span></li>
+                                            <li><span>Telefonlar uchun LCD ekranlar</span></li>
+                                            <li><span>Telefonlar uchun egiluvchan kabellar</span></li>
+                                            <li><span>Telefonlar uchun LCD ekranlar</span></li>
+                                            <li><span>Telefonlar uchun egiluvchan kabellar</span></li>
+                                            <li><span>Telefonlar uchun LCD ekranlar</span></li>
+                                        </ul>
+                                    </li>
+                                    <li class="lists">
+                                        <div><span>Telefonlar uchun aksessuarlar</span>
+                                            <ion-icon name="chevron-down-outline" class="menuchevron"></ion-icon></div>
+                                        <ul class="lists-box">
+                                            <li><span>Hammasini ko`rsatish</span></li>
+                                            <li><span>Portativ akkumulyatorlar</span></li>
+                                            <li><span>Telefon kabellari</span></li>
+                                            <li><span>Portativ akkumulyatorlar</span></li>
+                                            <li><span>Telefon kabellari</span></li>
+                                            <li><span>Portativ akkumulyatorlar</span></li>
+                                            <li><span>Telefon kabellari</span></li>
+                                            <li><span>Portativ akkumulyatorlar</span></li>
+                                            <li><span>Telefon kabellari</span></li>
+                                            <li><span>Portativ akkumulyatorlar</span></li>
+                                            <li><span>Telefon kabellari</span></li>
+                                        </ul>
+                                    </li>
+                                    <li class="alink"><div>Tugmali telefonlar</div></li>
+                                    <li class="alink"><div>Statsionar telefonlar va aksessuarlar</div></li>
+                                </div>
+                                <div class="ContentPage  col-9 row p-0" id="phonepage">
+                                    
+                                    <div class="products col-4">
+                                        <div class="img"><img src="https://zoodmall.com/cdn-cgi/image/w=500,fit=contain,f=auto/https://upload.zoodmall.com/web/product/picture/97/20693297/165087764216606000994.jpeg" alt=""></div>
+                                            <div class="box">
+                                                <div class="title">Telefon va aksessuarlar</div>
+                                                <div class="sum"><b>UZS 2,290,000</b></div>
+                                                <div class="total">
+                                                    <p>
+                                                        <img src="https://static.zoodmall.uz/_nuxt/img/zoodpay_logo_mini.2bc0960.png" alt="">
+                                                        <span>UZS 572,500</span>
+                                                    </p>
+                                                    <span>x4</span>
+                                                </div>
+                                                <div class="rating">
+                                                    <f>🤩</f>
+                                                    <span>5</span>
+                                                    <img src="https://images.zoodmall.uz/app/appImages/UZ.png" alt="">
+                                                </div>
+                                            </div>
+                                    </div>
+                                    <div class="products col-4">
+                                        <div class="img"><img src="https://zoodmall.com/cdn-cgi/image/w=500,fit=contain,f=auto/https://upload.zoodmall.com/web/product/picture/15/20693115/165087289793795400516.jpeg" alt=""></div>
+                                            <div class="box">
+                                                <div class="title">Telefon va aksessuarlar</div>
+                                                <div class="sum"><b>UZS 2,290,000</b></div>
+                                                <div class="total">
+                                                    <p>
+                                                        <img src="https://static.zoodmall.uz/_nuxt/img/zoodpay_logo_mini.2bc0960.png" alt="">
+                                                        <span>UZS 572,500</span>
+                                                    </p>
+                                                    <span>x4</span>
+                                                </div>
+                                                <div class="rating">
+                                                    <f>🤩</f>
+                                                    <span>5</span>
+                                                    <img src="https://images.zoodmall.uz/app/appImages/UZ.png" alt="">
+                                                </div>
+                                            </div>
+                                    </div>
+                                    <div class="products col-4">
+                                        <div class="img"><img src="https://zoodmall.com/cdn-cgi/image/w=500,fit=contain,f=auto/https://upload.zoodmall.com/web/product/picture/44/20673744/165071219915685700351.jpeg" alt=""></div>
+                                            <div class="box">
+                                                <div class="title">Telefon va aksessuarlar</div>
+                                                <div class="sum"><b>UZS 2,290,000</b></div>
+                                                <div class="total">
+                                                    <p>
+                                                        <img src="https://static.zoodmall.uz/_nuxt/img/zoodpay_logo_mini.2bc0960.png" alt="">
+                                                        <span>UZS 572,500</span>
+                                                    </p>
+                                                    <span>x4</span>
+                                                </div>
+                                                <div class="rating">
+                                                    <f>🤩</f>
+                                                    <span>5</span>
+                                                    <img src="https://images.zoodmall.uz/app/appImages/UZ.png" alt="">
+                                                </div>
+                                            </div>
+                                    </div>
+                                    <div class="products col-4">
+                                        <div class="img"><img src="https://zoodmall.com/cdn-cgi/image/w=500,fit=contain,f=auto/https://upload.zoodmall.com/web/product/picture/23/20673723/165070905092494100758.jpeg" alt=""></div>
+                                            <div class="box">
+                                                <div class="title">Telefon va aksessuarlar</div>
+                                                <div class="sum"><b>UZS 2,290,000</b></div>
+                                                <div class="total">
+                                                    <p>
+                                                        <img src="https://static.zoodmall.uz/_nuxt/img/zoodpay_logo_mini.2bc0960.png" alt="">
+                                                        <span>UZS 572,500</span>
+                                                    </p>
+                                                    <span>x4</span>
+                                                </div>
+                                                <div class="rating">
+                                                    <f>🤩</f>
+                                                    <span>5</span>
+                                                    <img src="https://images.zoodmall.uz/app/appImages/UZ.png" alt="">
+                                                </div>
+                                            </div>
+                                    </div>
+                                    <div class="products col-4">
+                                        <div class="img"><img src="https://zoodmall.com/cdn-cgi/image/w=500,fit=contain,f=auto/https://upload.zoodmall.com/web/product/picture/5/20637305/165069373258766900611.jpeg" alt=""></div>
+                                            <div class="box">
+                                                <div class="title">Telefon va aksessuarlar</div>
+                                                <div class="sum"><b>UZS 2,290,000</b></div>
+                                                <div class="total">
+                                                    <p>
+                                                        <img src="https://static.zoodmall.uz/_nuxt/img/zoodpay_logo_mini.2bc0960.png" alt="">
+                                                        <span>UZS 572,500</span>
+                                                    </p>
+                                                    <span>x4</span>
+                                                </div>
+                                                <div class="rating">
+                                                    <f>🤩</f>
+                                                    <span>5</span>
+                                                    <img src="https://images.zoodmall.uz/app/appImages/UZ.png" alt="">
+                                                </div>
+                                            </div>
+                                    </div>
+                                    <div class="products col-4">
+                                        <div class="img"><img src="https://zoodmall.com/cdn-cgi/image/w=500,fit=contain,f=auto/https://upload.zoodmall.com/web/product/picture/67/20561167/165260259085484200998.jpeg" alt=""></div>
+                                            <div class="box">
+                                                <div class="title">Telefon va aksessuarlar</div>
+                                                <div class="sum"><b>UZS 2,290,000</b></div>
+                                                <div class="total">
+                                                    <p>
+                                                        <img src="https://static.zoodmall.uz/_nuxt/img/zoodpay_logo_mini.2bc0960.png" alt="">
+                                                        <span>UZS 572,500</span>
+                                                    </p>
+                                                    <span>x4</span>
+                                                </div>
+                                                <div class="rating">
+                                                    <f>🤩</f>
+                                                    <span>5</span>
+                                                    <img src="https://images.zoodmall.uz/app/appImages/UZ.png" alt="">
+                                                </div>
+                                            </div>
+                                    </div>
+                                    <div class="products col-4">
+                                        <div class="img"><img src="https://zoodmall.com/cdn-cgi/image/w=500,fit=contain,f=auto/https://upload.zoodmall.com/web/product/picture/82/20341082/164948874528339800354.png" alt=""></div>
+                                            <div class="box">
+                                                <div class="title">Telefon va aksessuarlar</div>
+                                                <div class="sum"><b>UZS 2,290,000</b></div>
+                                                <div class="total">
+                                                    <p>
+                                                        <img src="https://static.zoodmall.uz/_nuxt/img/zoodpay_logo_mini.2bc0960.png" alt="">
+                                                        <span>UZS 572,500</span>
+                                                    </p>
+                                                    <span>x4</span>
+                                                </div>
+                                                <div class="rating">
+                                                    <f>🤩</f>
+                                                    <span>5</span>
+                                                    <img src="https://images.zoodmall.uz/app/appImages/UZ.png" alt="">
+                                                </div>
+                                            </div>
+                                    </div>
+                                    <div class="products col-4">
+                                        <div class="img"><img src="https://zoodmall.com/cdn-cgi/image/w=500,fit=contain,f=auto/https://avatars.mds.yandex.net/get-mpic/5289362/img_id3534113222065446851.jpeg/orig" alt=""></div>
+                                            <div class="box">
+                                                <div class="title">Telefon va aksessuarlar</div>
+                                                <div class="sum"><b>UZS 2,290,000</b></div>
+                                                <div class="total">
+                                                    <p>
+                                                        <img src="https://static.zoodmall.uz/_nuxt/img/zoodpay_logo_mini.2bc0960.png" alt="">
+                                                        <span>UZS 572,500</span>
+                                                    </p>
+                                                    <span>x4</span>
+                                                </div>
+                                                <div class="rating">
+                                                    <f>🤩</f>
+                                                    <span>5</span>
+                                                    <img src="https://images.zoodmall.uz/app/appImages/UZ.png" alt="">
+                                                </div>
+                                            </div>
+                                    </div>
+                                    <div class="products col-4">
+                                        <div class="img"><img src="https://zoodmall.com/cdn-cgi/image/w=500,fit=contain,f=auto/https://upload.zoodmall.com/web/product/picture/79/20318279/165304294424130600522.jpeg" alt=""></div>
+                                            <div class="box">
+                                                <div class="title">Telefon va aksessuarlar</div>
+                                                <div class="sum"><b>UZS 2,290,000</b></div>
+                                                <div class="total">
+                                                    <p>
+                                                        <img src="https://static.zoodmall.uz/_nuxt/img/zoodpay_logo_mini.2bc0960.png" alt="">
+                                                        <span>UZS 572,500</span>
+                                                    </p>
+                                                    <span>x4</span>
+                                                </div>
+                                                <div class="rating">
+                                                    <f>🤩</f>
+                                                    <span>5</span>
+                                                    <img src="https://images.zoodmall.uz/app/appImages/UZ.png" alt="">
+                                                </div>
+                                            </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="produckloader produckloaderswomen ">
+                                <img src="/images/loader.gif" alt="">
+                            </div>
+                            <div class="fullpost d-flex justify-content-center m-5">
+                                <div class="btn btns" onclick="womenproduck(phones)">Ko`proq ko`rish</div>
+                            </div>
+                        </div>
+                        <script>
+                            $(".lists").each(function (indexlists) {
+                                $(this).on("click", function () {
+                                    $(".lists-box").each(function (indexbox) {
+                                    if (indexlists == indexbox) {
+                                        $(this).slideToggle(200);
+                                    } else {
+                                        $(this).slideUp(200);
+                                    }
+                                    });
+                                    $(".menuchevron").each(function (value) {
+                                    if (indexlists == value) {
+                                        $(this).toggleClass("active");
+                                    } else {
+                                        $(this).removeClass("active");
+                                    }
+                                    });
+                                });
+                                });
+                    </script>
+                    </div>
+                </section>
+
+                <section class="computer" id="computerpage" style="display: none;">
+                    <div class="container-fluid menuAyollarkiyimi mb-5">
+                        <div class="container">
+                            <div class="pageLink d-flex mt-3 mb-3 "><span><span  onclick="pagereplace(homepage)">ZoodMall</></span>/</span><span>Kompyuter va ofis</span></div>
+                            <div class="menuProduck  row">
+                                <div class="fulls" style="display: none; font-weight: 700; font-size: 18px;">Kompyuter va ofis</div>
+                                <script>$('.fulls').click(function(){
+                                    $('.menuPage').slideToggle("slow");
+                                })</script>
+                                <div class="menuPage col-3">
+                                    <li class="lists">
+                                        <div><span>Noutbuklar uchun aksessuarlar</span>
+                                            <ion-icon name="chevron-down-outline" class="menuchevron"></ion-icon></div>
+                                        <ul class="lists-box">
+                                            <li><span>Hammasini ko`rsatish</span></li>
+                                            <li><span>Noutbuk sumkalari va g'iloflari</span></li>
+                                            <li><span>Noutbuk adapterlari</span></li>
+                                            <li><span>Noutbuk sumkalari va g'iloflari</span></li>
+                                            <li><span>Noutbuk adapterlari</span></li>
+                                            <li><span>Noutbuk sumkalari va g'iloflari</span></li>
+                                            <li><span>Noutbuk adapterlari</span></li>
+                                            <li><span>Noutbuk sumkalari va g'iloflari</span></li>
+                                            <li><span>Noutbuk adapterlari</span></li>
+                                        </ul>
+                                    </li>
+                                    <li class="alink"><div>Kompyuter kabellari va konnektorlar</div></li>
+                                    <li class="alink"><div>Noutbuklar</div></li>
+                                    <li class="lists">
+                                        <div><span>Statsionar kompyuterlar</span>
+                                            <ion-icon name="chevron-down-outline" class="menuchevron"></ion-icon></div>
+                                        <ul class="lists-box">
+                                            <li><span>Hammasini ko`rsatish</span></li>
+                                            <li><span>Stol usti kompyuterlari</span></li>
+                                            <li><span>Monobloklar</span></li>
+                                            <li><span>Stol usti kompyuterlari</span></li>
+                                            <li><span>Monobloklar</span></li>
+                                            <li><span>Stol usti kompyuterlari</span></li>
+                                            <li><span>Monobloklar</span></li>
+                                            <li><span>Stol usti kompyuterlari</span></li>
+                                            <li><span>Monobloklar</span></li>
+                                        </ul>
+                                    </li>
+                                    <li class="lists">
+                                        <div><span>Planshetlar</span>
+                                            <ion-icon name="chevron-down-outline" class="menuchevron"></ion-icon></div>
+                                        <ul class="lists-box">
+                                            <li><span>Hammasini ko`rsatish</span></li>
+                                            <li><span>Chizish planshetlari</span></li>
+                                            <li><span>Chizish planshetlari</span></li>
+                                            <li><span>Chizish planshetlari</span></li>
+                                            <li><span>Chizish planshetlari</span></li>
+                                            <li><span>Chizish planshetlari</span></li>
+                                            <li><span>Chizish planshetlari</span></li>
+                                            <li><span>Chizish planshetlari</span></li>
+                                            <li><span>Chizish planshetlari</span></li>
+                                            <li><span>Chizish planshetlari</span></li>
+                                            <li><span>Chizish planshetlari</span></li>
+                                            <li><span>Chizish planshetlari</span></li>
+                                            <li><span>Chizish planshetlari</span></li>
+                                        </ul>
+                                    </li>
+                                    <li class="lists">
+                                        <div><span>Kompyuter komponentlari</span>
+                                            <ion-icon name="chevron-down-outline" class="menuchevron"></ion-icon></div>
+                                        <ul class="lists-box">
+                                            <li><span>Hammasini ko`rsatish</span></li>
+                                            <li><span>Hammasini ko`rsatish</span></li>
+                                            <li><span>Hammasini ko`rsatish</span></li>
+                                        </ul>
+                                    </li>
+                                    <li class="lists">
+                                        <div><span>Tashqi xotira qurilmalari</span>
+                                            <ion-icon name="chevron-down-outline" class="menuchevron"></ion-icon></div>
+                                        <ul class="lists-box">
+                                            <li><span>Hammasini ko`rsatish</span></li>
+                                            <li><span>Hammasini ko`rsatish</span></li>
+                                            <li><span>Hammasini ko`rsatish</span></li>
+                                        </ul>
+                                    </li>
+                                    <li class="lists">
+                                        <div><span>Kompyuter periferiyasi</span>
+                                            <ion-icon name="chevron-down-outline" class="menuchevron"></ion-icon></div>
+                                        <ul class="lists-box">
+                                            <li><span>Hammasini ko`rsatish</span></li>
+                                            <li><span>Hammasini ko`rsatish</span></li>
+                                        </ul>
+                                    </li>
+                                    <li class="lists">
+                                        <div><span>Ichki hotira qurilmalari</span>
+                                            <ion-icon name="chevron-down-outline" class="menuchevron"></ion-icon></div>
+                                        <ul class="lists-box">
+                                            <li><span>Hammasini ko`rsatish</span></li>
+                                        </ul>
+                                    </li>
+                                </div>
+                                <div class="ContentPage contentpagecomputer col-9 row p-0"  id="compyuterpage">
+                                    
+                                    <div class="products col-4">
+                                        <div class="img"><img src="https://zoodmall.com/cdn-cgi/image/w=500,fit=contain,f=auto/https://files.glotr.uz/company/000/005/575/products/2021/03/13/2021-03-13-20-35-18-632194-eafb9236355d1f325139bd3145434488.jpg?_=ozbol" alt=""></div>
+                                            <div class="box">
+                                                <div class="title">Kompyuter va ofis</div>
+                                                <div class="sum"><b>UZS 2,290,000</b></div>
+                                                <div class="total">
+                                                    <p>
+                                                        <img src="https://static.zoodmall.uz/_nuxt/img/zoodpay_logo_mini.2bc0960.png" alt="">
+                                                        <span>UZS 572,500</span>
+                                                    </p>
+                                                    <span>x4</span>
+                                                </div>
+                                                <div class="rating">
+                                                    <f>🤩</f>
+                                                    <span>5</span>
+                                                    <img src="https://images.zoodmall.uz/app/appImages/UZ.png" alt="">
+                                                </div>
+                                            </div>
+                                    </div>
+                                    <div class="products col-4">
+                                        <div class="img"><img src="https://zoodmall.com/cdn-cgi/image/w=500,fit=contain,f=auto/https://upload.zoodmall.com/web/product/picture/57/20532057/165001717549241400208.png" alt=""></div>
+                                            <div class="box">
+                                                <div class="title">Kompyuter va ofis</div>
+                                                <div class="sum"><b>UZS 2,290,000</b></div>
+                                                <div class="total">
+                                                    <p>
+                                                        <img src="https://static.zoodmall.uz/_nuxt/img/zoodpay_logo_mini.2bc0960.png" alt="">
+                                                        <span>UZS 572,500</span>
+                                                    </p>
+                                                    <span>x4</span>
+                                                </div>
+                                                <div class="rating">
+                                                    <f>🤩</f>
+                                                    <span>5</span>
+                                                    <img src="https://images.zoodmall.uz/app/appImages/UZ.png" alt="">
+                                                </div>
+                                            </div>
+                                    </div>
+                                    <div class="products col-4">
+                                        <div class="img"><img src="https://zoodmall.com/cdn-cgi/image/w=500,fit=contain,f=auto/https://stereotv.com.ua/wp-content/uploads/2021/10/JEDEL-K504-1.jpg" alt=""></div>
+                                            <div class="box">
+                                                <div class="title">Kompyuter va ofis</div>
+                                                <div class="sum"><b>UZS 2,290,000</b></div>
+                                                <div class="total">
+                                                    <p>
+                                                        <img src="https://static.zoodmall.uz/_nuxt/img/zoodpay_logo_mini.2bc0960.png" alt="">
+                                                        <span>UZS 572,500</span>
+                                                    </p>
+                                                    <span>x4</span>
+                                                </div>
+                                                <div class="rating">
+                                                    <f>🤩</f>
+                                                    <span>5</span>
+                                                    <img src="https://images.zoodmall.uz/app/appImages/UZ.png" alt="">
+                                                </div>
+                                            </div>
+                                    </div>
+                                    <div class="products col-4">
+                                        <div class="img"><img src="https://zoodmall.com/cdn-cgi/image/w=500,fit=contain,f=auto/https://www.dreamscomputers.lk/wp-content/uploads/2021/07/Capture.jpg" alt=""></div>
+                                            <div class="box">
+                                                <div class="title">Kompyuter va ofis</div>
+                                                <div class="sum"><b>UZS 2,290,000</b></div>
+                                                <div class="total">
+                                                    <p>
+                                                        <img src="https://static.zoodmall.uz/_nuxt/img/zoodpay_logo_mini.2bc0960.png" alt="">
+                                                        <span>UZS 572,500</span>
+                                                    </p>
+                                                    <span>x4</span>
+                                                </div>
+                                                <div class="rating">
+                                                    <f>🤩</f>
+                                                    <span>5</span>
+                                                    <img src="https://images.zoodmall.uz/app/appImages/UZ.png" alt="">
+                                                </div>
+                                            </div>
+                                    </div>
+                                    <div class="products col-4">
+                                        <div class="img"><img src="https://zoodmall.com/cdn-cgi/image/w=500,fit=contain,f=auto/https://smartgatestore.com/wp-content/uploads/2021/08/PDX213-BK_1.jpg" alt=""></div>
+                                            <div class="box">
+                                                <div class="title">Kompyuter va ofis</div>
+                                                <div class="sum"><b>UZS 2,290,000</b></div>
+                                                <div class="total">
+                                                    <p>
+                                                        <img src="https://static.zoodmall.uz/_nuxt/img/zoodpay_logo_mini.2bc0960.png" alt="">
+                                                        <span>UZS 572,500</span>
+                                                    </p>
+                                                    <span>x4</span>
+                                                </div>
+                                                <div class="rating">
+                                                    <f>🤩</f>
+                                                    <span>5</span>
+                                                    <img src="https://images.zoodmall.uz/app/appImages/UZ.png" alt="">
+                                                </div>
+                                            </div>
+                                    </div>
+                                    <div class="products col-4">
+                                        <div class="img"><img src="https://zoodmall.com/cdn-cgi/image/w=500,fit=contain,f=auto/https://upload.zoodmall.com/web/product/picture/90/20349690/164854930765409400327.jpeg" alt=""></div>
+                                            <div class="box">
+                                                <div class="title">Kompyuter va ofis</div>
+                                                <div class="sum"><b>UZS 2,290,000</b></div>
+                                                <div class="total">
+                                                    <p>
+                                                        <img src="https://static.zoodmall.uz/_nuxt/img/zoodpay_logo_mini.2bc0960.png" alt="">
+                                                        <span>UZS 572,500</span>
+                                                    </p>
+                                                    <span>x4</span>
+                                                </div>
+                                                <div class="rating">
+                                                    <f>🤩</f>
+                                                    <span>5</span>
+                                                    <img src="https://images.zoodmall.uz/app/appImages/UZ.png" alt="">
+                                                </div>
+                                            </div>
+                                    </div>
+                                    <div class="products col-4">
+                                        <div class="img"><img src="https://zoodmall.com/cdn-cgi/image/w=500,fit=contain,f=auto/https://upload.zoodmall.com/web/product/picture/39/20034339/164519166789815600983.jpeg" alt=""></div>
+                                            <div class="box">
+                                                <div class="title">Kompyuter va ofis</div>
+                                                <div class="sum"><b>UZS 2,290,000</b></div>
+                                                <div class="total">
+                                                    <p>
+                                                        <img src="https://static.zoodmall.uz/_nuxt/img/zoodpay_logo_mini.2bc0960.png" alt="">
+                                                        <span>UZS 572,500</span>
+                                                    </p>
+                                                    <span>x4</span>
+                                                </div>
+                                                <div class="rating">
+                                                    <f>🤩</f>
+                                                    <span>5</span>
+                                                    <img src="https://images.zoodmall.uz/app/appImages/UZ.png" alt="">
+                                                </div>
+                                            </div>
+                                    </div>
+                                    <div class="products col-4">
+                                        <div class="img"><img src="https://zoodmall.com/cdn-cgi/image/w=500,fit=contain,f=auto/https://upload.zoodmall.com/web/product/picture/27/20015027/164475426041445800930.jpeg" alt=""></div>
+                                            <div class="box">
+                                                <div class="title">Kompyuter va ofis</div>
+                                                <div class="sum"><b>UZS 2,290,000</b></div>
+                                                <div class="total">
+                                                    <p>
+                                                        <img src="https://static.zoodmall.uz/_nuxt/img/zoodpay_logo_mini.2bc0960.png" alt="">
+                                                        <span>UZS 572,500</span>
+                                                    </p>
+                                                    <span>x4</span>
+                                                </div>
+                                                <div class="rating">
+                                                    <f>🤩</f>
+                                                    <span>5</span>
+                                                    <img src="https://images.zoodmall.uz/app/appImages/UZ.png" alt="">
+                                                </div>
+                                            </div>
+                                    </div>
+                                    <div class="products col-4">
+                                        <div class="img"><img src="https://zoodmall.com/cdn-cgi/image/w=500,fit=contain,f=auto/https://upload.zoodmall.com/web/product/picture/42/19804742/164396310713563000324.jpeg" alt=""></div>
+                                            <div class="box">
+                                                <div class="title">Kompyuter va ofis</div>
+                                                <div class="sum"><b>UZS 2,290,000</b></div>
+                                                <div class="total">
+                                                    <p>
+                                                        <img src="https://static.zoodmall.uz/_nuxt/img/zoodpay_logo_mini.2bc0960.png" alt="">
+                                                        <span>UZS 572,500</span>
+                                                    </p>
+                                                    <span>x4</span>
+                                                </div>
+                                                <div class="rating">
+                                                    <f>🤩</f>
+                                                    <span>5</span>
+                                                    <img src="https://images.zoodmall.uz/app/appImages/UZ.png" alt="">
+                                                </div>
+                                            </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="produckloader produckloaderswomen ">
+                                <img src="/images/loader.gif" alt="">
+                            </div>
+                            <div class="fullpost d-flex justify-content-center m-5">
+                                <div class="btn btns" onclick="womenproduck(computers)">Ko`proq ko`rish</div>
+                            </div>
+                        </div>
+                        <script>
+                            $(".lists").each(function (indexlists) {
+                                $(this).on("click", function () {
+                                    $(".lists-box").each(function (indexbox) {
+                                    if (indexlists == indexbox) {
+                                        $(this).slideToggle(200);
+                                    } else {
+                                        $(this).slideUp(200);
+                                    }
+                                    });
+                                    $(".menuchevron").each(function (value) {
+                                    if (indexlists == value) {
+                                        $(this).toggleClass("active");
+                                    } else {
+                                        $(this).removeClass("active");
+                                    }
+                                    });
+                                });
+                                });
+                    </script>
+                    </div>
+                </section>
+
+                <section class="electronic" id="electronic" style="display: none;">
+                    <div class="container-fluid menuAyollarkiyimi mb-5">
+                        <div class="container">
+                            <div class="pageLink d-flex mt-3 mb-3 "><span><span  onclick="pagereplace(homepage)">ZoodMall</></span>/</span><span>Maishiy elektronika</span></div>
+                            <div class="menuProduck row">
+                                <div class="fulls" style="display: none; font-weight: 700; font-size: 18px;">Maishiy elektronika</div>
+                                <script>$('.fulls').click(function(){
+                                    $('.menuPage').slideToggle("slow");
+                                })</script>
+                                <div class="menuPage col-3">
+                                    <li class="lists">
+                                        <div><span>TOvoz kuchaytirgich</span>
+                                            <ion-icon name="chevron-down-outline" class="menuchevron"></ion-icon></div>
+                                        <ul class="lists-box">
+                                            <li><span>Hammasini ko`rsatish</span></li>
+                                            <li><span>Portativ dinamiklar</span></li>
+                                            <li><span>Saundbarlar</span></li>
+                                            <li><span>Portativ dinamiklar</span></li>
+                                            <li><span>Saundbarlar</span></li>
+                                            <li><span>Portativ dinamiklar</span></li>
+                                            <li><span>Saundbarlar</span></li>
+                                            <li><span>Portativ dinamiklar</span></li>
+                                            <li><span>Saundbarlar</span></li>
+                                            <li><span>Portativ dinamiklar</span></li>
+                                            <li><span>Saundbarlar</span></li>
+                                            <li><span>Portativ dinamiklar</span></li>
+                                            <li><span>Saundbarlar</span></li>
+                                            <li><span>Portativ dinamiklar</span></li>
+                                            <li><span>Saundbarlar</span></li>
+                                        </ul>
+                                    </li>
+                                    <li class="lists">
+                                        <div><span>Quloqchinlar</span>
+                                            <ion-icon name="chevron-down-outline" class="menuchevron"></ion-icon></div>
+                                        <ul class="lists-box">
+                                            <li><span>Hammasini ko`rsatish</span></li>
+                                            <li><span>Simli quloqchinlar</span></li>
+                                            <li><span>Simsiz quloqchinlar</span></li>
+                                            <li><span>Simli quloqchinlar</span></li>
+                                            <li><span>Simsiz quloqchinlar</span></li>
+                                            <li><span>Simli quloqchinlar</span></li>
+                                            <li><span>Simsiz quloqchinlar</span></li>
+                                            <li><span>Simli quloqchinlar</span></li>
+                                            <li><span>Simsiz quloqchinlar</span></li>
+                                            <li><span>Simli quloqchinlar</span></li>
+                                            <li><span>Simsiz quloqchinlar</span></li>
+                                            <li><span>Simli quloqchinlar</span></li>
+                                            <li><span>Simsiz quloqchinlar</span></li>
+                                        </ul>
+                                    </li>
+                                    <li class="lists">
+                                        <div><span>Geyming mahsulotlari</span>
+                                            <ion-icon name="chevron-down-outline" class="menuchevron"></ion-icon></div>
+                                        <ul class="lists-box">
+                                            <li><span>Hammasini ko`rsatish</span></li>
+                                            <li><span>O'yin pristavkalari</span></li>
+                                            <li><span>Geympadlar</span></li>
+                                            <li><span>O'yin pristavkalari</span></li>
+                                            <li><span>Geympadlar</span></li>
+                                            <li><span>O'yin pristavkalari</span></li>
+                                            <li><span>Geympadlar</span></li>
+                                            <li><span>O'yin pristavkalari</span></li>
+                                            <li><span>Geympadlar</span></li>
+                                            <li><span>O'yin pristavkalari</span></li>
+                                            <li><span>Geympadlar</span></li>
+                                            <li><span>O'yin pristavkalari</span></li>
+                                            <li><span>Geympadlar</span></li>
+                                            <li><span>O'yin pristavkalari</span></li>
+                                            <li><span>Geympadlar</span></li>
+                                        </ul>
+                                    </li>
+                                    <li class="alink"><div>Smart elektronika</div></li>
+                                    <li class="alink"><div>Quvvatlantirish manbalari</div></li>
+                                    <li class="lists">
+                                        <div><span>Audio va video texnika</span>
+                                            <ion-icon name="chevron-down-outline" class="menuchevron"></ion-icon></div>
+                                        <ul class="lists-box">
+                                            <li><span>Hammasini ko`rsatish</span></li>
+                                            <li><span>Portativ media pleyerlar</span></li>
+                                            <li><span>Raqamli diktofonlar</span></li>
+                                            <li><span>Portativ media pleyerlar</span></li>
+                                            <li><span>Raqamli diktofonlar</span></li>
+                                            <li><span>Portativ media pleyerlar</span></li>
+                                            <li><span>Raqamli diktofonlar</span></li>
+                                            <li><span>Portativ media pleyerlar</span></li>
+                                            <li><span>Raqamli diktofonlar</span></li>
+                                            <li><span>Portativ media pleyerlar</span></li>
+                                            <li><span>Raqamli diktofonlar</span></li>
+                                        </ul>
+                                    </li>
+                                    <li class="lists">
+                                        <div><span>Kamera va suratlar</span>
+                                            <ion-icon name="chevron-down-outline" class="menuchevron"></ion-icon></div>
+                                        <ul class="lists-box">
+                                            <li><span>Hammasini ko`rsatish</span></li>
+                                            <li><span>Kamera va surat aksessuarlari</span></li>
+                                            <li><span>Kamera va surati</span></li>
+                                            <li><span>Surat aksessuarlari</span></li>
+                                            <li><span>Kamera aksessuarlari</span></li>
+                                            <li><span>Aksessuarlar</span></li>
+                                            <li><span>Kamera va surat aksessuarlari</span></li>
+                                            <li><span>Kamera va surati</span></li>
+                                            <li><span>Surat aksessuarlari</span></li>
+                                            <li><span>Kamera aksessuarlari</span></li>
+                                            <li><span>Aksessuarlar</span></li>
+                                        </ul>
+                                    </li>
+                                    <li class="lists">
+                                        <div><span>Aksessuarlar va ehtiyot qismlar</span>
+                                            <ion-icon name="chevron-down-outline" class="menuchevron"></ion-icon></div>
+                                        <ul class="lists-box">
+                                            <li><span>Hammasini ko`rsatish</span></li>
+                                            <li><span>Kamera va surat aksessuarlari</span></li>
+                                            <li><span>Kamera va surati</span></li>
+                                            <li><span>Surat aksessuarlari</span></li>
+                                            <li><span>Kamera aksessuarlari</span></li>
+                                            <li><span>Aksessuarlar</span></li>
+                                            <li><span>Kamera va surat aksessuarlari</span></li>
+                                            <li><span>Kamera va surati</span></li>
+                                            <li><span>Surat aksessuarlari</span></li>
+                                            <li><span>Kamera aksessuarlari</span></li>
+                                            <li><span>Aksessuarlar</span></li>
+                                        </ul>
+                                    </li>
+                                    <li class="lists">
+                                        <div><span>Smart soatlar va brasletlar</span>
+                                            <ion-icon name="chevron-down-outline" class="menuchevron"></ion-icon></div>
+                                        <ul class="lists-box">
+                                            <li><span>Hammasini ko`rsatish</span></li>
+                                            <li><span>Kamera va surat aksessuarlari</span></li>
+                                            <li><span>Kamera va surati</span></li>
+                                            <li><span>Surat aksessuarlari</span></li>
+                                            <li><span>Kamera aksessuarlari</span></li>
+                                            <li><span>Aksessuarlar</span></li>
+                                        </ul>
+                                    </li>
+                                    <li class="lists">
+                                        <div><span>Televizorlar</span>
+                                            <ion-icon name="chevron-down-outline" class="menuchevron"></ion-icon></div>
+                                        <ul class="lists-box">
+                                            <li><span>Hammasini ko`rsatish</span></li>
+                                            <li><span>Kamera va surat aksessuarlari</span></li>
+                                            <li><span>Kamera va surati</span></li>
+                                            <li><span>Surat aksessuarlari</span></li>
+                                            <li><span>Kamera aksessuarlari</span></li>
+                                            <li><span>Aksessuarlar</span></li>
+                                        </ul>
+                                    </li>
+                                    <li class="lists">
+                                        <div><span>Video kuzatuv</span>
+                                            <ion-icon name="chevron-down-outline" class="menuchevron"></ion-icon></div>
+                                        <ul class="lists-box">
+                                            <li><span>Hammasini ko`rsatish</span></li>
+                                            <li><span>Kamera va surat aksessuarlari</span></li>
+                                            <li><span>Kamera va surati</span></li>
+                                            <li><span>Surat aksessuarlari</span></li>
+                                            <li><span>Kamera aksessuarlari</span></li>
+                                            <li><span>Aksessuarlar</span></li>
+                                        </ul>
+                                    </li>
+                                </div>
+                                <div class="ContentPage  col-9 row p-0" id="electronicpage">
+                                    
+                                    <div class="products col-4">
+                                        <div class="img"><img src="https://zoodmall.com/cdn-cgi/image/w=500,fit=contain,f=auto/https://upload.zoodmall.com/web/product/picture/41/20057241/164604153440651200813.png" alt=""></div>
+                                            <div class="box">
+                                                <div class="title">Maishiy elektronika</div>
+                                                <div class="sum"><b>UZS 2,290,000</b></div>
+                                                <div class="total">
+                                                    <p>
+                                                        <img src="https://static.zoodmall.uz/_nuxt/img/zoodpay_logo_mini.2bc0960.png" alt="">
+                                                        <span>UZS 572,500</span>
+                                                    </p>
+                                                    <span>x4</span>
+                                                </div>
+                                                <div class="rating">
+                                                    <f>🤩</f>
+                                                    <span>5</span>
+                                                    <img src="https://images.zoodmall.uz/app/appImages/UZ.png" alt="">
+                                                </div>
+                                            </div>
+                                    </div>
+                                    <div class="products col-4">
+                                        <div class="img"><img src="https://zoodmall.com/cdn-cgi/image/w=500,fit=contain,f=auto/https://upload.zoodmall.com/web/product/picture/39/20069439/164620770492333300720.jpeg" alt=""></div>
+                                            <div class="box">
+                                                <div class="title">Maishiy elektronika</div>
+                                                <div class="sum"><b>UZS 2,290,000</b></div>
+                                                <div class="total">
+                                                    <p>
+                                                        <img src="https://static.zoodmall.uz/_nuxt/img/zoodpay_logo_mini.2bc0960.png" alt="">
+                                                        <span>UZS 572,500</span>
+                                                    </p>
+                                                    <span>x4</span>
+                                                </div>
+                                                <div class="rating">
+                                                    <f>🤩</f>
+                                                    <span>5</span>
+                                                    <img src="https://images.zoodmall.uz/app/appImages/UZ.png" alt="">
+                                                </div>
+                                            </div>
+                                    </div>
+                                    <div class="products col-4">
+                                        <div class="img"><img src="https://zoodmall.com/cdn-cgi/image/w=500,fit=contain,f=auto/https://upload.zoodmall.com/web/product/picture/14/20308514/164758914681210000451.png" alt=""></div>
+                                            <div class="box">
+                                                <div class="title">Maishiy elektronika</div>
+                                                <div class="sum"><b>UZS 2,290,000</b></div>
+                                                <div class="total">
+                                                    <p>
+                                                        <img src="https://static.zoodmall.uz/_nuxt/img/zoodpay_logo_mini.2bc0960.png" alt="">
+                                                        <span>UZS 572,500</span>
+                                                    </p>
+                                                    <span>x4</span>
+                                                </div>
+                                                <div class="rating">
+                                                    <f>🤩</f>
+                                                    <span>5</span>
+                                                    <img src="https://images.zoodmall.uz/app/appImages/UZ.png" alt="">
+                                                </div>
+                                            </div>
+                                    </div>
+                                    <div class="products col-4">
+                                        <div class="img"><img src="https://zoodmall.com/cdn-cgi/image/w=500,fit=contain,f=auto/https://upload.zoodmall.com/web/product/picture/41/20335741/164820179149086900774.jpeg" alt=""></div>
+                                            <div class="box">
+                                                <div class="title">Maishiy elektronika</div>
+                                                <div class="sum"><b>UZS 2,290,000</b></div>
+                                                <div class="total">
+                                                    <p>
+                                                        <img src="https://static.zoodmall.uz/_nuxt/img/zoodpay_logo_mini.2bc0960.png" alt="">
+                                                        <span>UZS 572,500</span>
+                                                    </p>
+                                                    <span>x4</span>
+                                                </div>
+                                                <div class="rating">
+                                                    <f>🤩</f>
+                                                    <span>5</span>
+                                                    <img src="https://images.zoodmall.uz/app/appImages/UZ.png" alt="">
+                                                </div>
+                                            </div>
+                                    </div>
+                                    <div class="products col-4">
+                                        <div class="img"><img src="https://zoodmall.com/cdn-cgi/image/w=500,fit=contain,f=auto/https://techno.uz/image/cache/catalog/Sony%20PlayStation%204%20Slim%201-700x500.jpg" alt=""></div>
+                                            <div class="box">
+                                                <div class="title">Maishiy elektronika</div>
+                                                <div class="sum"><b>UZS 2,290,000</b></div>
+                                                <div class="total">
+                                                    <p>
+                                                        <img src="https://static.zoodmall.uz/_nuxt/img/zoodpay_logo_mini.2bc0960.png" alt="">
+                                                        <span>UZS 572,500</span>
+                                                    </p>
+                                                    <span>x4</span>
+                                                </div>
+                                                <div class="rating">
+                                                    <f>🤩</f>
+                                                    <span>5</span>
+                                                    <img src="https://images.zoodmall.uz/app/appImages/UZ.png" alt="">
+                                                </div>
+                                            </div>
+                                    </div>
+                                    <div class="products col-4">
+                                        <div class="img"><img src="https://zoodmall.com/cdn-cgi/image/w=500,fit=contain,f=auto/https://upload.zoodmall.com/web/product/picture/97/20343097/164846781924217800677.jpeg" alt=""></div>
+                                            <div class="box">
+                                                <div class="title">Maishiy elektronika</div>
+                                                <div class="sum"><b>UZS 2,290,000</b></div>
+                                                <div class="total">
+                                                    <p>
+                                                        <img src="https://static.zoodmall.uz/_nuxt/img/zoodpay_logo_mini.2bc0960.png" alt="">
+                                                        <span>UZS 572,500</span>
+                                                    </p>
+                                                    <span>x4</span>
+                                                </div>
+                                                <div class="rating">
+                                                    <f>🤩</f>
+                                                    <span>5</span>
+                                                    <img src="https://images.zoodmall.uz/app/appImages/UZ.png" alt="">
+                                                </div>
+                                            </div>
+                                    </div>
+                                    <div class="products col-4">
+                                        <div class="img"><img src="https://zoodmall.com/cdn-cgi/image/w=500,fit=contain,f=auto/https://defender-global.com/static/products/51/79/64/9/5179649.63552__FreeMotion_B552.1920x1014.png" alt=""></div>
+                                            <div class="box">
+                                                <div class="title">Maishiy elektronika</div>
+                                                <div class="sum"><b>UZS 2,290,000</b></div>
+                                                <div class="total">
+                                                    <p>
+                                                        <img src="https://static.zoodmall.uz/_nuxt/img/zoodpay_logo_mini.2bc0960.png" alt="">
+                                                        <span>UZS 572,500</span>
+                                                    </p>
+                                                    <span>x4</span>
+                                                </div>
+                                                <div class="rating">
+                                                    <f>🤩</f>
+                                                    <span>5</span>
+                                                    <img src="https://images.zoodmall.uz/app/appImages/UZ.png" alt="">
+                                                </div>
+                                            </div>
+                                    </div>
+                                    <div class="products col-4">
+                                        <div class="img"><img src="https://zoodmall.com/cdn-cgi/image/w=500,fit=contain,f=auto/https://upload.zoodmall.com/web/product/picture/73/20532773/164999582632367100395.jpeg" alt=""></div>
+                                            <div class="box">
+                                                <div class="title">Maishiy elektronika</div>
+                                                <div class="sum"><b>UZS 2,290,000</b></div>
+                                                <div class="total">
+                                                    <p>
+                                                        <img src="https://static.zoodmall.uz/_nuxt/img/zoodpay_logo_mini.2bc0960.png" alt="">
+                                                        <span>UZS 572,500</span>
+                                                    </p>
+                                                    <span>x4</span>
+                                                </div>
+                                                <div class="rating">
+                                                    <f>🤩</f>
+                                                    <span>5</span>
+                                                    <img src="https://images.zoodmall.uz/app/appImages/UZ.png" alt="">
+                                                </div>
+                                            </div>
+                                    </div>
+                                    <div class="products col-4">
+                                        <div class="img"><img src="https://zoodmall.com/cdn-cgi/image/w=500,fit=contain,f=auto/https://upload.zoodmall.com/web/product/picture/29/20539529/165001875854763100143.jpeg" alt=""></div>
+                                            <div class="box">
+                                                <div class="title">Maishiy elektronika</div>
+                                                <div class="sum"><b>UZS 2,290,000</b></div>
+                                                <div class="total">
+                                                    <p>
+                                                        <img src="https://static.zoodmall.uz/_nuxt/img/zoodpay_logo_mini.2bc0960.png" alt="">
+                                                        <span>UZS 572,500</span>
+                                                    </p>
+                                                    <span>x4</span>
+                                                </div>
+                                                <div class="rating">
+                                                    <f>🤩</f>
+                                                    <span>5</span>
+                                                    <img src="https://images.zoodmall.uz/app/appImages/UZ.png" alt="">
+                                                </div>
+                                            </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="produckloader produckloaderswomen ">
+                                <img src="/images/loader.gif" alt="">
+                            </div>
+                            <div class="fullpost d-flex justify-content-center m-5">
+                                <div class="btn btns" onclick="womenproduck(electronics)">Ko`proq ko`rish</div>
+                            </div>
+                        </div>
+                        <script>
+                            $(".lists").each(function (indexlists) {
+                                $(this).on("click", function () {
+                                    $(".lists-box").each(function (indexbox) {
+                                    if (indexlists == indexbox) {
+                                        $(this).slideToggle(200);
+                                    } else {
+                                        $(this).slideUp(200);
+                                    }
+                                    });
+                                    $(".menuchevron").each(function (value) {
+                                    if (indexlists == value) {
+                                        $(this).toggleClass("active");
+                                    } else {
+                                        $(this).removeClass("active");
+                                    }
+                                    });
+                                });
+                                });
+                    </script>
+                    </div>
+                </section>
+    <!-- qo`shimcha page tugashi-->
+
+
+    <!-- barcha footer qismidagi contentlar-->
+    <section class="container-fluid footer">
+        <div class="container about mb-5">
+            <h1><b>ZoodMall: Hozir xarid qiling, pulini keyinroq to'lang</b></h1>
+            <p>Onlayn-xaridlar - taraqqiyot tomonga dadil qadamlarning namoyonidir. Bu sotuvchilar uchun ham, xaridorlar uchun ham qulay: mijoz o’ziga kerakli mahsulotlarni qidirishda vaqt tejaydi. Kerakli mahsulotni tanlashga bir nechagina daqiqa ajratib, qimmat bo’lmagan taklifni topish mumkin va bunda xaridingis uyizga yetkazilib ham beriladi. Shveytsariyaning OrientSwiss kompaniyasi ZoodMall deb nomlangan B2C formatidagi savdo maydonchasi ilovasini va saytini ishga tushirish orqali onlayn-xaridlarni takomillashtirmoqda va yanada hammabop qilmoqda.</p>
+        </div>
+        <div class="container about mb-5">
+            <h1><b>ZoodMall orqali nimalarni topish mumkin?</b></h1>
+            <p>Saytda deyarli hamma narsa bor. 30 mingdan ortiq sotuvchi 6 milliondan ortiq mahsulot turlarini taklif etadi va assortiment kun sayin yanada kengayib bormoqda. Mahsulotlarni Xitoydan olish mumkin, shuningdek, mahalliy ishbilarmonlarning takliflari ham mavjud. Savdo maydonchasida siz quyidagilarni topasiz:</p>
+            <ul class="lists">
+                <li style="text-align:justify">hamyonbop va taniqli brendlardan smartfonlar va boshqa elektronika;</li>
+                <li style="text-align:justify">ayollar, erkaklar va bolalarning kiyim-kechaklari;</li>
+                <li style="text-align:justify">avtomobillar va mototexnika uchun ehtiyot qismlar va aksessuarlar;</li>
+                <li style="text-align:justify">kompyuter uchun qismlar;</li>
+                <li style="text-align:justify">uylarni ta'mirlash va jihozlash uchun barcha mahsulotlar;</li>
+                <li style="text-align:justify">bolalar uchun mahsulotlar;</li>
+                <li style="text-align:justify">turli xil maishiy texnika;</li>
+                <li style="text-align:justify">aksessuarlar;</li>
+                <li style="text-align:justify">qo'lda ishlatiladigan va elektr asboblar;</li>
+                <li style="text-align:justify">barcha fasllar uchun poyabzal;</li>
+                <li style="text-align:justify">kanselyariya mahsulotlari;</li>
+                <li style="text-align:justify">atir-upalar va parvarish uchun kosmetika mahsulotlari;</li>
+                <li style="text-align:justify">zargarlik buyumlari;</li>
+                <li style="text-align:justify">sport mahsulotlari va b.</li>
+            </ul>
+            <p>Bundan tashqari, ZoodMall maydonchasida siz:</p>
+            <ul>
+                <li style="text-align:justify">Xiaomi;</li>
+                <li style="text-align:justify">Bosch;</li>
+                <li style="text-align:justify">Artel;</li>
+                <li style="text-align:justify">Nokia;</li>
+                <li style="text-align:justify">Blackview;</li>
+                <li style="text-align:justify">Apple;</li>
+                <li style="text-align:justify">Samsung;</li>
+                <li style="text-align:justify">Huawei va b.</li>
+                <br>
+                <p>kabi mashhur brendlardan mahsulotlarni arzon narxlarda topishingiz mumkin.</p>
+            </ul>
+            <p>Ilova yoki veb-saytni ochar ekansiz, Xitoy va Ipak yo'li mamlakatlarini o'z ichiga olgan eng yirik bozorga tashrif buyurgan bo’lasiz.</p>
+
+        </div>
+        <div class="container about mb-5">
+            <h1><b>Buyurtma uchun to’lov qanday amalga oshiriladi va u qayerga yetkazib beriladi?</b></h1>
+            <p>ZoodMall maydonchasida o’zizga yoqqan mahsulotni xarid qilgandan so'ng, "Hozir xarid qiling, pulini keyinroq to'lang" foizsiz bo’lib-bo’lib to'lash xizmatidan foydalanishingiz mumkin. ZoodPay tizimi sizga xaridlarni 4 yoki 6 ta teng to'lov orqali bo’lib-bo’lib to’lash imkoniyatini ta’minlaydi. Kerakli pul miqdorini o’tkazish kerakligini eslatish uchun sizga vaqtida oldindan xabarnomalar keladi. Bo’lib-bo’lib to’lashni milliy valyutada tanlashingiz mumkin, mahsilotlarning narxi sotib olish paytida qat’iy belgilanadi va keyinchalik o'zgarmaydi.</p><br>
+            <p>Bundan tashqari, «Yetkazib bergandan keyin to'lash» xizmati ham mavjud. Bunda kerakli pul miqdorini 14 kun ichida hech qanday foizsiz otkazishingiz kerak. ZoodMall maydonchasida mahsulotga buyurtma berish vaqtida siz pochtada yoki yetkazuvchi shaxsga naqd pul to’lashni tanlashingiz mumkin</p><br>
+            <p>Yetkazib berish Qozog'iston, Ozarbayjon, O'zbekiston, shuningdek, Markaziy Osiyo va Yaqin Sharqning boshqa mamlakatlari bo’ylab amalga oshiriladi.</p>
+            <br>
+        </div>
+        <div class="container about">
+            <h1><b>Nafaqat xarid olish, balki sotish imkoni ham</b></h1><br>
+            <p>ZoodMall maydonchasi ishga tushirilgan mamlakatlardagi mahalliy sotuvchilar, savdo maydonchasi imkoniyatlaridan foydalanish orqali, o'zlarining B2C e-commerce bizneslarini yo’lga qo’yishlari mumkin. O’z mahsulotlaringizni hamda ularning sifatli tavsifi va fotosuratlarini joylashtirish orqali, mahsulotlaringizni 225 milliondan ortiq mijozlar e’tiboriga havola qilish imkonini qo’lga kiritasiz. Mahsulot tavsiflari avtomatik ravishda 8 tilga tarjima qilinadi. Servis komissiyasi 2 dan 15% gachani tashkil etadi. Shuningdak, har doim qo'llab-quvvatlash xizmati ta’minlanadi.</p><br>
+        </div>
+        <div class="container row about-footer m-auto p-0 pt-5 pb-5">
+            <div class="icon-links col-5 ">
+                <div class="logo">
+                    <img src="https://static.zoodmall.uz/_nuxt/img/zoodmall-logo.1688b2e.svg" alt="">
+                </div><br>
+                <div class="social-links">
+                    <p class="p-0"><small><b>Biz ijtimoiy tarmoqlarda</b></small></p>
+                    <ul class="social-link-box p-0 row">
+                        <li class="col-2 p-0"><a href="#"><i class='bx bxl-youtube'></i></a></li>
+                        <li class="col-2 p-0"><a href="#"><i class='bx bxl-facebook' ></i></a></li>
+                        <li class="col-2 p-0"><a href="#"><i class='bx bxl-instagram' ></i></a></li>
+                        <li class="col-2 p-0"><a href="#"><i class='bx bxl-tiktok' ></i></a></li>
+                        <li class="col-2 p-0"><a href="#"><i class='bx bxl-telegram' ></i></a></li>
+                    </ul>
+                </div>
+                <div class="app-liks row">
+                    <span class="col-4 appleimage"><a href="#"><img src="https://static.zoodmall.uz/_nuxt/img/appStore_uz.4f9c0e1.svg" alt=""></a></span>
+                    <span class="col-4"><a href="#"><img src="https://static.zoodmall.uz/_nuxt/img/playStore_uz.46b748a.svg" alt=""></a></span>
+                    <span class="col-4 appgalleryImage"><a href="#"><img src="https://static.zoodmall.uz/_nuxt/img/Huawei_uz.3463a0c.png" alt=""></a></span>
+                </div>
+            </div>
+            <div class="quick-links col-4 m-auto">
+                <div>
+                    <div class="footer__link"><a href="#">ZoodMall haqida</a></div> 
+                    <div class="footer__link"><a href="#">Foydalanish shartlari</a></div> 
+                    <div class="footer__link"><a href="#">Maxfiylik va xavfsizlik siyosati</a></div> 
+                    <div class="footer__link"><a href="#">Mahsulotlarni va toʻlovlarni qaytarish siyosati</a></div> 
+                    <div class="footer__link"><a href="#">ZOODMALL'DA SOTISH</a></div> 
+                    <div class="footer__link"><a href="#">Careers</a></div></div>
+            </div>
+            <div class="help-center-links col-3 m-auto">
+                <h4>ALOQA</h4>
+                <div class="help-center-svg row">
+                    <span class="col-2 d-flex justify-content-center align-items-center">
+                        <a href="#">
+                            <svg width="48" height="51" viewBox="0 0 48 51" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M18 20.7188C18 18.9587 16.6566 17.5312 15 17.5312H13.5C10.1859 17.5312 7.5 20.3851 7.5 23.9062V28.6875C7.5 32.2087 10.1859 35.0625 13.5 35.0625H15C16.6566 35.0625 18 33.6351 18 31.875V20.7188ZM34.5 35.0625C37.8141 35.0625 40.5 32.2087 40.5 28.6875V23.9062C40.5 20.3851 37.8141 17.5312 34.5 17.5312H33C31.3434 17.5312 30 18.9587 30 20.7188V31.875C30 33.6351 31.3434 35.0625 33 35.0625H34.5ZM24 0C10.6106 0 0.429375 11.8366 0 25.5V27.0938C0 27.9743 0.67125 28.6875 1.5 28.6875H3C3.82875 28.6875 4.5 27.9743 4.5 27.0938V25.5C4.5 14.0758 13.2478 4.78125 24 4.78125C34.7522 4.78125 43.5 14.0758 43.5 25.5H43.4888C43.4963 25.7421 43.5 42.0073 43.5 42.0073C43.5 44.3331 41.7253 46.2188 39.5363 46.2188H30C30 43.5781 27.9853 41.4375 25.5 41.4375H22.5C20.0147 41.4375 18 43.5781 18 46.2188C18 48.8594 20.0147 51 22.5 51H39.5363C44.2106 51 48 46.9738 48 42.0073V25.5C47.5706 11.8366 37.3894 0 24 0Z" fill="#8D8D8D"></path></svg>
+                        </a>
+                    </span>
+                    <span class="help-center-link col-10">
+                        <div><small>Savolingiz bormi?</small></div>
+                        <div><small><a href="#">+998 71 207 00 75</a></small></div>
+                        <div><small><a href="#">support@zoodmall.uz</a></small></div>
+                    </span>
+                </div>
+            </div>
+        </div>
+        <div class="container footer-bottom p-0 pt-5 pb-5 m-auto">
+            <div class="row" >
+                <div class="col-6 d-flex justify-content-start align-items-center">
+                    <span>© 2020 ZoodMall quvonchli xaridlar</span>
+                </div>
+                <div class="col-6 " style="background: transparent;">
+                    <div class="row cards" style="background: transparent;">
+                        <div class="col-6"></div>
+                        <div class="col-6 row">
+                            <div class="img col-6"><a href="#"><img src="https://static.zoodmall.uz/_nuxt/img/paymentmethod.84fc7b0.png" alt=""></a></div>
+                            <div class="img col-3"><a href="#"><img src="https://static.zoodmall.uz/_nuxt/img/paymentmethod3.f454523.png" alt=""></a></div>
+                            <div class="img col-3"><a href="#"><img src="https://static.zoodmall.uz/_nuxt/img/paymentmethod4.ce61b6f.png" alt=""></a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- barcha footer qismidagi contentlar tugashi-->
+
+
+    <!--saytni yuqorisiga qaytaruvchi block-->
+    <div class="scrollTop">
+        <a href="#totop"><ion-icon name="chevron-up-outline"></ion-icon></a>
+    </div>
+    <!--saytni yuqorisiga qaytaruvchi block tugashi-->
+
+
+
+    <!--yorug` va qorong`u rejim bloki-->
+    <div class="modesite">
+        <input type="radio" name="check" checked id="lightcheck">
+        <input type="radio" name="check" id="darkcheck">
+        <label for="lightcheck"><div class="mode light " onclick="modesite('light')"><i class='bx bxs-sun'></i></div></label>
+        <label for="darkcheck"><div class="mode dark active" onclick="modesite('dark')"><i class='bx bxs-moon' ></i></div></label>
+        <div class="slider" id="slider"></div>
+    </div>    
+    <!--yorug` va qorong`u rejim bloki oxiri-->
+
+{% endblock   %}
+    {% comment %} <!--Loader-->
+    <div class="loader">
+        <img src="https://static.zoodmall.uz/_nuxt/img/zoodmall-logo.1688b2e.svg" alt="" class="">
+    </div>
+    <!--Loader tugashi-->
+
+
+
+
+    <!--- Jquary cdn linki--->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!--Slider js likni-->
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <!--JavaScript code-->
+    <script src="{% static 'css/javascript/script.js'  %}"></script>
+    <!--Slider javascript code-->
+    <script src="{% static 'css/javascript/slider.js'  %}"></script> {% endcomment %}
+{% comment %} </body> {% endcomment %}
+{% comment %} </html> {% endcomment %}
