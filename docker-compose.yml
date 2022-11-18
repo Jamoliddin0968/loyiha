@@ -23,6 +23,7 @@ services:
       POSTGRES_PASSWORD: "takk"
     container_name: pgsql
 
+
   rabbit:
     image: rabbitmq:3-management-alpine
     container_name: 'rabbitmq'
