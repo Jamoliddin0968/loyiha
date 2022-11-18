@@ -16,7 +16,7 @@ class Atribut(models.Model):
         return self.name
     
     def skidka_price(self):
-        return self.price*0.9
+        return self.price*0.8
     
     
 class Category(models.Model):
